@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>McDonald's Corporation (NYSE: MCD), Equity Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDEFEE;
+  --panel:#FFFFFF;
+  --panel-2:#F7F8F7;
+  --ink:#15181A;
+  --ink-2:#3E464A;
+  --muted:#6E767B;
+  --rule:#D9DDDB;
+  --rule-2:#E9ECEA;
+  --signal:#A81E15;
+  --signal-soft:#F6E6E4;
+  --gold:#A97A08;
+  --gold-soft:#FAF0DA;
+  --green:#1C6549;
+  --green-soft:#E3F0EA;
+  --blue:#20495F;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:15px;line-height:1.55;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;line-height:1.15;margin:0}
+p{margin:0 0 .85em}
+a{color:var(--blue)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- masthead ---------- */
+.masthead{
+  position:sticky;top:0;z-index:60;background:var(--panel);
+  border-bottom:1px solid var(--rule);
+}
+.masthead-in{
+  max-width:1420px;margin:0 auto;padding:14px 26px;
+  display:flex;align-items:center;gap:26px;flex-wrap:wrap;
+}
+.brandmark{display:flex;align-items:baseline;gap:12px;min-width:0}
+.brandmark .tk{
+  font-family:var(--serif);font-size:27px;font-weight:600;letter-spacing:-.02em;
+}
+.brandmark .nm{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mast-stats{display:flex;gap:0;margin-left:auto;flex-wrap:wrap}
+.mstat{padding:0 18px;border-left:1px solid var(--rule-2)}
+.mstat:first-child{border-left:0}
+.mstat dt{font-size:10.5px;color:var(--muted);letter-spacing:.04em;margin-bottom:1px}
+.mstat dd{margin:0;font-size:17px;font-weight:600;letter-spacing:-.01em}
+.mstat dd.dn{color:var(--signal)}
+.mstat dd.up{color:var(--green)}
+.verdict{
+  padding:5px 13px;border:1px solid var(--signal);color:var(--signal);
+  background:var(--signal-soft);font-size:12.5px;font-weight:600;letter-spacing:.02em;border-radius:2px;
+}
+
+/* ---------- shell ---------- */
+.shell{max-width:1420px;margin:0 auto;padding:0 26px 90px;display:block}
+.rail{position:sticky;top:var(--mast-h,70px);z-index:50;background:var(--paper);margin:0 -26px 0;border-bottom:1px solid var(--rule)}
+.rail-title{display:none}
+.rail nav{display:flex;flex-direction:row;overflow-x:auto;gap:2px;padding:0 26px;scrollbar-width:thin}
+.rail button{
+  appearance:none;background:none;border:0;border-bottom:2px solid transparent;
+  font:inherit;font-size:13.5px;color:var(--ink-2);text-align:center;white-space:nowrap;
+  padding:11px 13px;cursor:pointer;transition:color .12s,border-color .12s;
+}
+.rail button:hover{color:var(--ink)}
+.rail button[aria-selected="true"]{color:var(--signal);border-bottom-color:var(--signal);font-weight:600}
+.rail button:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.disclaimer{
+  margin:18px 0 0;padding:12px 16px;border:1px solid var(--rule);border-left:3px solid var(--ink);
+  background:var(--panel);border-radius:0 2px 2px 0;font-size:13px;color:var(--ink-2);
+}
+.disclaimer strong{color:var(--ink)}
+.logo-box{border:1px solid var(--rule);background:var(--panel);border-radius:2px;padding:26px 20px;display:grid;place-items:center;min-height:160px;margin-bottom:16px}
+.logo-ph{border:1px dashed #C3C9C6;border-radius:2px;padding:18px 16px;text-align:center;font-size:12.5px;color:var(--muted);line-height:1.5}
+.logo-ph code{background:#E7EAE8;padding:1px 5px;border-radius:2px;font-size:12px}
+
+.view{padding:30px 0 0;min-width:0}
+.view[hidden]{display:none}
+.view-head{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--rule)}
+.view-head h2{font-size:31px;margin-bottom:6px}
+.view-head p{color:var(--muted);font-size:14px;max-width:74ch;margin:0}
+
+/* ---------- panels ---------- */
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:2px;padding:22px 24px;margin-bottom:20px}
+.panel > h3{font-size:19px;margin-bottom:4px}
+.panel > .sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g-7-5{grid-template-columns:1.4fr 1fr}
+.prose{max-width:78ch}
+.prose.wide{max-width:none}
+.prose p{color:var(--ink-2)}
+.lede{font-size:16.5px;line-height:1.6;color:var(--ink)}
+
+/* ---------- key figures ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule-2);border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin-bottom:20px}
+.kpi{background:var(--panel);padding:14px 16px}
+.kpi dt{font-size:10.5px;letter-spacing:.05em;color:var(--muted);margin-bottom:3px}
+.kpi dd{margin:0;font-size:21px;font-weight:600;letter-spacing:-.015em}
+.kpi .foot{font-size:11.5px;color:var(--muted);font-weight:400;letter-spacing:0}
+
+/* ---------- tables ---------- */
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+caption{text-align:left;font-size:12px;color:var(--muted);padding-bottom:8px}
+th,td{padding:7px 10px;text-align:right;border-bottom:1px solid var(--rule-2)}
+th:first-child,td:first-child{text-align:left;padding-left:0}
+th:last-child,td:last-child{padding-right:0}
+thead th{
+  font-size:11px;letter-spacing:.04em;color:var(--muted);font-weight:600;
+  border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+tbody tr:hover{background:var(--panel-2)}
+tr.sum td{font-weight:600;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+tr.head-row td{font-weight:600;color:var(--muted);font-size:11px;letter-spacing:.05em;padding-top:16px;border-bottom:1px solid var(--rule)}
+tr.head-row:hover{background:none}
+td.neg,.neg{color:var(--signal)}
+td.pos,.pos{color:var(--green)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.proj th,.proj td{background:linear-gradient(var(--gold-soft),var(--gold-soft))}
+
+/* ---------- misc ui ---------- */
+.note{border-left:3px solid var(--gold);background:var(--gold-soft);padding:14px 18px;border-radius:0 2px 2px 0;font-size:13.5px;margin:0 0 20px}
+.note strong{font-weight:600}
+.note p:last-child{margin-bottom:0}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.03em;padding:2px 8px;border-radius:2px;border:1px solid}
+.tag.ok{color:var(--green);border-color:#B9D6C8;background:var(--green-soft)}
+.tag.warn{color:var(--gold);border-color:#E4D3A6;background:var(--gold-soft)}
+.tag.bad{color:var(--signal);border-color:#E7C2BE;background:var(--signal-soft)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.chip{
+  appearance:none;font:inherit;font-size:12.5px;background:var(--panel);border:1px solid var(--rule);
+  color:var(--ink-2);padding:5px 12px;border-radius:2px;cursor:pointer;
+}
+.chip[aria-pressed="true"],.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.hint{font-size:12px;color:var(--muted);margin:10px 0 0}
+ul.clean{margin:0 0 0 0;padding-left:19px}
+ul.clean li{margin-bottom:7px;color:var(--ink-2)}
+dl.defs{margin:0}
+dl.defs dt{font-weight:600;font-size:13.5px;margin-top:14px}
+dl.defs dd{margin:2px 0 0;color:var(--ink-2);font-size:13.5px}
+
+/* people / risks */
+.people{display:grid;gap:14px}
+.person{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding-bottom:14px;border-bottom:1px solid var(--rule-2)}
+.person:last-child{border-bottom:0;padding-bottom:0}
+.person .ini{width:40px;height:40px;border-radius:50%;background:var(--panel-2);border:1px solid var(--rule);display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--ink-2)}
+.person b{display:block;font-size:14.5px}
+.person span{font-size:13px;color:var(--muted)}
+.person p{margin:5px 0 0;font-size:13.5px;color:var(--ink-2)}
+
+.risk{border-top:1px solid var(--rule-2);padding:13px 0}
+.risk:first-of-type{border-top:0}
+.risk-h{display:flex;gap:10px;align-items:baseline;justify-content:space-between}
+.risk-h b{font-size:14px}
+.risk p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2);max-width:80ch}
+
+/* accordion for indicators */
+.acc{border-bottom:1px solid var(--rule-2)}
+.acc summary{
+  cursor:pointer;list-style:none;padding:10px 0;display:grid;
+  grid-template-columns:1fr auto;gap:12px;align-items:center;font-size:13.5px;
+}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:hover{color:var(--signal)}
+.acc summary .q{font-size:11px;color:var(--muted);border:1px solid var(--rule);border-radius:50%;width:17px;height:17px;display:inline-grid;place-items:center;margin-left:7px}
+.acc[open] summary .q{background:var(--ink);color:#fff;border-color:var(--ink)}
+.acc .body{padding:0 0 14px;font-size:13.5px;color:var(--ink-2);max-width:82ch}
+.acc .body .formula{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+/* sensitivity grid */
+table.sens td{cursor:pointer;text-align:center;padding:7px 6px;font-size:12.5px;border:1px solid var(--rule-2)}
+table.sens th{text-align:center;font-size:11px}
+table.sens td.base{outline:2px solid var(--gold);outline-offset:-2px;font-weight:600}
+table.sens td.sel{background:var(--ink);color:#fff;font-weight:600}
+table.sens td:hover{background:var(--panel-2)}
+table.sens td.sel:hover{background:var(--ink)}
+.sens-out{margin-top:12px;font-size:13.5px}
+.sens-out b{font-size:20px;font-weight:600}
+
+/* valuation scale */
+.scale-wrap{padding:8px 0 0}
+.readout{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.readout .big{font-family:var(--serif);font-size:46px;font-weight:600;letter-spacing:-.025em;line-height:1}
+.readout .delta{font-size:19px;font-weight:600}
+
+/* charts */
+.chart{width:100%;display:block}
+.chart text{font-family:var(--sans);fill:var(--muted);font-size:10.5px}
+.chart .axis line,.chart .axis path{stroke:var(--rule);shape-rendering:crispEdges}
+.chart .grid line{stroke:var(--rule-2);shape-rendering:crispEdges}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-top:6px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.tip{
+  position:fixed;pointer-events:none;z-index:99;background:var(--ink);color:#fff;
+  font-size:12px;padding:6px 9px;border-radius:2px;opacity:0;transition:opacity .1s;white-space:nowrap;
+}
+
+footer.doc{max-width:1420px;margin:0 auto;padding:24px 26px 60px;color:var(--muted);font-size:12px;border-top:1px solid var(--rule)}
+
+@media (max-width:1000px){
+  .shell{padding:0 16px 70px}
+  .rail{margin:0 -16px}
+  .rail nav{padding:0 16px}
+  .rail button{padding:9px 10px;font-size:13px}
+  .g2,.g3,.g-7-5{grid-template-columns:1fr}
+  .masthead-in{padding:10px 16px;gap:12px}
+  .mast-stats{width:100%;margin-left:0;gap:0}
+  .mstat{padding:0 12px 0 0;border-left:0;border-right:1px solid var(--rule-2)}
+  .mstat:last-child{border-right:0}
+  .mstat{padding-left:12px}
+  .mstat:first-child{padding-left:0}
+  .readout .big{font-size:34px}
+  .view-head h2{font-size:25px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="tip" id="tip"></div>
+
+<header class="masthead">
+  <div class="masthead-in">
+    <div class="brandmark">
+      <span class="tk">MCD</span>
+      <span class="nm">McDonald's Corporation · NYSE · Equity Research · Rogério Teles</span>
+    </div>
+    <dl class="mast-stats">
+      <div class="mstat"><dt>Cotação de referência</dt><dd class="num">252,53&nbsp;$</dd></div>
+      <div class="mstat"><dt>Valor médio do modelo</dt><dd class="num" id="mastFair">262,71&nbsp;$</dd></div>
+      <div class="mstat"><dt>Diferença</dt><dd class="num" id="mastDelta">+4,0%</dd></div>
+      <div class="mstat" style="display:grid;align-content:center"><span class="verdict" id="mastVerdict" style="border-color:var(--gold);color:var(--gold);background:var(--gold-soft)">Perto do justo valor</span></div>
+    </dl>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="rail">
+    <div class="rail-title">Secções</div>
+    <nav id="rail" role="tablist" aria-label="Secções do relatório"></nav>
+  </aside>
+  <p class="disclaimer" style="margin-bottom:-6px"><strong>Aviso.</strong> Este documento é um trabalho de equity research elaborado por Rogério Teles, para fins de estudo e análise pessoal. Não constitui, nem deve ser interpretado como, recomendação de investimento, aconselhamento financeiro ou convite à compra ou venda de qualquer valor mobiliário. As projeções e avaliações aqui apresentadas assentam em premissas próprias, que podem não se verificar.</p>
+  <main id="main"></main>
+</div>
+
+<footer class="doc">
+  Este estudo sobre a McDonald's Corporation (NYSE: MCD) apresenta valores em milhões de dólares americanos, salvo indicação em contrário. Cotação de referência da avaliação: 252,53&nbsp;$; cotação de fecho a 31-12-2025 utilizada na capitalização bolsista: 305,63&nbsp;$.
+  <br><br>
+  <strong>Fontes.</strong> Relatório e contas e Form 10-K de 2025 da McDonald's Corporation, Form 10-Q do segundo trimestre de 2026 e procuração DEF 14A de 2026; sítio institucional da McDonald's (corporate.mcdonalds.com); Yahoo Finance, para os múltiplos de mercado das empresas comparáveis; investing.com, para a série histórica de cotações; e a metodologia de Aswath Damodaran (NYU Stern), para o ajustamento dos múltiplos de vendas pela margem e para os parâmetros de custo do capital. Modelo próprio: MCDONALDS.xlsx.
+  <br><br>
+  Documento de trabalho elaborado por <strong>Rogério Teles</strong> para fins de estudo e análise pessoal. Não constitui recomendação de investimento.
+</footer>
+
+<script>
+/* ============================================================
+   DADOS, extraídos de MCDONALDS.xlsx e do resumo em Word
+   ============================================================ */
+const LOGO_MCD = 'data:image/png;base64,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';
+
+const M = {
+  precoRef: 252.53,
+  precoFecho2025: 305.63,
+  acoes: 716.4,
+  mcap: 218953.332,
+  dividaLiq: 39199,
+  dividaFin: 39973,
+  caixa: 774,
+  ev: 258152.332,
+  eps: 11.95,
+  dps: 7.17,
+
+  cotacoes: [["2021-12",268.07],["2022-01",259.45],["2022-02",244.77],["2022-03",247.28],["2022-04",249.16],["2022-05",252.21],["2022-06",246.88],["2022-07",263.37],["2022-08",252.28],["2022-09",230.74],["2022-10",272.66],["2022-11",272.79],["2022-12",263.53],["2023-01",267.40],["2023-02",263.91],["2023-03",279.61],["2023-04",295.75],["2023-05",285.11],["2023-06",298.41],["2023-07",293.20],["2023-08",281.15],["2023-09",263.44],["2023-10",262.17],["2023-11",281.84],["2023-12",296.51],["2024-01",292.72],["2024-02",292.28],["2024-03",281.95],["2024-04",273.04],["2024-05",258.89],["2024-06",254.84],["2024-07",265.40],["2024-08",288.66],["2024-09",304.51],["2024-10",292.11],["2024-11",296.01],["2024-12",289.89],["2025-01",288.70],["2025-02",308.33],["2025-03",312.37],["2025-04",319.65],["2025-05",313.85],["2025-06",292.17],["2025-07",300.07],["2025-08",313.54],["2025-09",303.89],["2025-10",298.43],["2025-11",311.82],["2025-12",305.63],["2026-01",315.00],["2026-02",341.06],["2026-03",310.79],["2026-04",293.59],["2026-05",279.20],["2026-06",270.31],["2026-07",270.64],["2026-08",260.06]],
+
+  anos: [2020,2021,2022,2023,2024,2025],
+  anosProj: [2026,2027,2028,2029,2030],
+
+  /* --- receitas por região (Folha1, concordantes com o 10-K) --- */
+  regiao: {
+    EUA:  [7828.5, 8865.0, 9588.4, 10568, 10631, 10825],
+    IOM:  [9570.7, 12219.8, 11297.0, 12382, 12628, 13633],
+    IDL:  [1808.6, 2138.1, 2297.2, 2543, 2661, 2427],
+    total:[19207.8, 23222.9, 23182.6, 25493, 25920, 26885],
+    cagr: {EUA:0.06696, IOM:0.07332, IDL:0.06058, total:0.06956}
+  },
+  resOperacionalRegiao: {
+    EUA:  [3789.1, 4754.7, 5136.4, 5694, 5733, 5808],
+    IOM:  [3315.1, 5130.6, 3926, 5831, 5946, 6382],
+    IDL:  [219.8, 470.7, 308.6, 121, 33, 203],
+    total:[7324, 10356, 9371, 11646, 11712, 12393],
+    cagr: {EUA:0.08918, IOM:0.13997, IDL:-0.01578, total:0.11093}
+  },
+
+  /* --- demonstração de resultados, tal como no separador do modelo --- */
+  dr: [
+    ['Total de receitas', [19207.8,23222.9,23182.6,25494,25920,26885], [27960.40,29905.42,31985.74,34210.77,36590.58]],
+    ['Alimentos e embalagens', [2564.2,3096.8,2737.3,3039,2995,3006], [3408.78,3645.90,3899.52,4170.79,4460.92]],
+    ['Salários e benefícios', [2416.4,2677.2,2617.4,2886,2959,2905], [3212.67,3436.15,3675.18,3930.84,4204.28]],
+    ['Ocupação e outras despesas operacionais', [2000.6,2273.3,2026.2,2299,2381,2358], [2605.87,2787.15,2981.03,3188.40,3410.20]],
+    ['Ocupação de restaurantes franquiados', [2207.5,2335,2349.7,2475,2536,2618], [2838.58,3036.05,3247.24,3473.13,3714.73]],
+    ['Outras despesas de restaurantes', [267,260.4,244.8,232,339,564], [367.36,392.91,420.24,449.48,480.74]],
+    ['Depreciação e amortização (custo)', [300.6,329.7,370.4,382,447,457], [370.02,395.76,423.29,452.74,484.23]],
+    ['Outros', [2245,2377.8,2492.2,2435,2412,2583], [2377.51,2542.89,2719.79,2908.98,3111.34]],
+    ['Outras (receitas) despesas operacionais, líq.', [-117.5,-483.3,973.6,99,139,2], [686.83,734.60,785.71,840.36,898.82]],
+    ['__Total de custos e despesas operacionais', [11883.8,12866.9,13811.6,13847,14208,14492], [15867.61,16971.42,18152.00,19414.72,20765.27]],
+    ['__Resultado operacional (EBIT)', [7324,10356,9371,11647,11712,12393], [12092.79,12934.00,13833.73,14796.05,15862.85]],
+    ['Despesa de juros, líquida', [1218.1,1185.8,1207,1361,1506,1582], [1416.85,1582.91,1650.80,1678.21,1712.65]],
+    ['(Receita) despesa não operacional, líq.', [-34.8,42.3,338.6,-236,-139,-87], [-13.69,-14.64,-15.66,-16.75,-17.92]],
+    ['__Resultado antes de impostos', [6140.7,9127.9,7825.4,10522,10345,10897], [10689.63,11365.74,12198.59,13134.59,14168.11]],
+    ['Provisão para impostos', [1410.2,1582.7,1648,2053,2121,2334], [2189.39,2327.86,2498.44,2690.15,2901.83]],
+    ['__Resultado líquido', [4730.5,7545.2,6177.4,8469,8223,8563], [8414.20,8999.52,9625.56,10295.14,11011.31]],
+    ['Resultado por ação, diluído ($)', [6.31,10.04,8.33,11.56,11.39,11.95], null],
+    ['Dividendos declarados por ação ($)', [5.04,5.25,5.66,6.23,6.78,7.17], null],
+    ['Nº médio de ações, diluído (M)', [750.1,751.8,741.3,732.3,721.9,716.4], null]
+  ],
+
+  /* --- balanço --- */
+  bal: [
+    ['#ATIVO'],
+    ['Caixa e equivalentes', [3449.1,4709.2,2583.8,4579.3,1085,774]],
+    ['Contas e títulos a receber', [2110.3,1872.4,2115,2488,2383,2466]],
+    ['Inventários', [51.1,55.6,52,52.8,56,61]],
+    ['Despesas antecipadas e outros ativos correntes', [632.7,511.3,673.4,866.3,1074,863]],
+    ['__Total do ativo corrente', [6243.2,7148.5,5424.2,7986.4,4599,4163]],
+    ['Investimentos em afiliadas', [1297.2,1201.2,1064.5,1080.2,2710,2820]],
+    ['Goodwill', [2773.1,2782.5,2900.4,3040.4,3145,3354]],
+    ['Diversos', [3527.4,4449.5,4707.2,5617.8,6095,6331]],
+    ['__Total de outros ativos', [7597.7,8433.2,8672.1,9738.4,11950,12505]],
+    ['Ativo de direito de uso de locação, líq.', [13827.7,13552,12565.7,13514.4,13339,14606]],
+    ['Imóveis e equipamentos, líquidos', [24958.2,24720.6,23773.6,24907.6,25295,28241]],
+    ['__Total do ativo', [52626.8,53854.3,50435.6,56146.8,55182,59515]],
+    ['#PASSIVO E CAPITAL PRÓPRIO'],
+    ['Contas a pagar', [741.3,1006.8,980.2,1102.9,1029,1149]],
+    ['Passivo de locação (corrente)', [701.5,705.5,661.1,688.1,636,694]],
+    ['Impostos sobre o rendimento', [741.1,360.7,274.9,705.1,361,250]],
+    ['Outros impostos', [227,236.7,255.1,268,224,247]],
+    ['Juros a pagar', [388.4,363.3,393.4,468.9,482,533]],
+    ['Salários a pagar e outros passivos', [1138.3,1347,1237.4,1433.6,1129,1488]],
+    ['Dívida de curto prazo e parcela corrente', [2243.6,0,0,2192.4,0,0]],
+    ['__Total do passivo corrente', [6181.2,4020,3802.1,6859,3861,4361]],
+    ['Dívida de longo prazo', [35196.8,35622.7,35903.5,37152.9,38424,39973]],
+    ['Passivo de locação de longo prazo', [13321.3,13020.9,12134.4,13057.7,12888,14147]],
+    ['Impostos de longo prazo', [1970.7,1896.8,791.9,363.2,344,139]],
+    ['Receitas diferidas, taxas de franquia', [702,738.3,757.8,790.1,778,945]],
+    ['Outros passivos de longo prazo', [1054.1,1081,1051.8,949.7,771,704]],
+    ['Impostos diferidos', [2025.6,2075.6,1997.5,1680.9,1914,1038]],
+    ['Ações ordinárias + prémio de emissão', [7920.2,8248.2,8563.7,8909.5,9298,9658]],
+    ['Resultados retidos', [53908.1,57534.7,59543.9,63479.9,66834,70282]],
+    ['Outros resultados integrais acumulados', [-2586.8,-2573.7,-2486.6,-2456,-2553,-2414]],
+    ['Ações próprias em tesouraria', [-67066.4,-67810.2,-71624.4,-74640.1,-77375,-79316]],
+    ['__Total do capital próprio (défice)', [-7824.9,-4601,-6003.4,-4706.7,-3797,-1791]],
+    ['__Total do passivo e capital próprio', [52626.8,53854.3,50435.6,56146.8,55182,59515]]
+  ],
+
+  /* --- fluxos de caixa --- */
+  cf: [
+    ['Resultado líquido', [4730.5,7545.2,6177.4,8469,8223,8563]],
+    ['Depreciação e amortização', [1751.4,1868.1,1870.6,1978,2097,2199]],
+    ['Impostos diferidos', [6.4,-428.3,-345.7,-686,-574,-126]],
+    ['Remuneração com base em ações', [92.4,139.2,166.7,175,172,165]],
+    ['(Ganho) perda na venda de restaurantes', [-28.2,-97.8,732.7,-103,-37,-149]],
+    ['Outros ajustamentos', [-75.2,-339.1,-570.4,-113,3,-207]],
+    ['Variação do fundo de maneio', [-212.1,454.2,-644.6,-108,-438,106]],
+    ['__Caixa gerado pelas operações', [6265.2,9141.5,7386.7,9612,9447,10551]],
+    ['Despesas de capital (capex)', [-1640.8,-2040,-1899.2,-2357,-2775,-3365]],
+    ['Aquisições de restaurantes', [-66.1,-374.2,-807,-441,-669,-354]],
+    ['__Caixa usado em investimento', [-3091.6,-4331.4,-5356.2,-3185,-5346,-3822]],
+    ['Emissões de dívida de longo prazo', [5543,1154.4,3374.5,5221,2380,4724]],
+    ['Reembolsos de dívida de longo prazo', [-2411.7,-2240,-2202.4,-2441,-2777,-4802]],
+    ['Recompra de ações próprias', [-907.8,-845.5,-3896,-3054,-2824,-2056]],
+    ['Dividendos pagos', [-3752.9,-3918.6,-4168.2,-4533,-4870,-5115]],
+    ['__Caixa usado em financiamento', [-2249,-5595.6,-6580.2,-4374,-7495,-7125]],
+    ['__Variação de caixa', [2550.6,1260.1,-2125.4,1996,-3494,-311]],
+    ['Caixa no final do ano', [3449.1,4709.2,2583.8,4579,1085,774]]
+  ],
+
+  /* --- indicadores (2021-2025) --- */
+  indAnos: [2021,2022,2023,2024,2025],
+  indicadores: [
+    {g:'Liquidez'},
+    {n:'Liquidez imediata', v:[1.1714,0.6796,0.6676,0.2810,0.1775], f:'Caixa e equivalentes ÷ Passivo corrente',
+     d:'Mede a fração das dívidas de curto prazo que a empresa liquidaria de imediato apenas com disponibilidades, sem vender inventários nem cobrar clientes. A queda de 1,17 para 0,18 reflete a política deliberada da McDonald\u2019s de não acumular caixa ocioso: a tesouraria excedentária é devolvida ao acionista por dividendo e recompra.'},
+    {n:'Liquidez reduzida', v:[1.7644,1.4130,1.1567,1.1766,0.9406], f:'(Ativo corrente − Inventários) ÷ Passivo corrente',
+     d:'Igual à liquidez geral mas expurgada dos inventários, o ativo corrente menos líquido. Num negócio de restauração o inventário é residual (61 M$ em 2025), pelo que o indicador quase coincide com a liquidez geral.'},
+    {n:'Liquidez geral', v:[1.7782,1.4266,1.1644,1.1911,0.9546], f:'Ativo corrente ÷ Passivo corrente',
+     d:'Indica se os ativos que se convertem em dinheiro no prazo de um ano cobrem as dívidas exigíveis nesse mesmo prazo. Abaixo de 1 significa fundo de maneio negativo. Em modelos de franquia com recebimento rápido e pagamento a fornecedores dilatado, um valor inferior a 1 é normal e não sinaliza dificuldade.'},
+    {n:'Tesouraria líquida (M$)', v:[3128.5,1622.1,1127.4,738,-198], f:'Fundo de maneio − Necessidades de fundo de maneio',
+     d:'Excedente (ou défice) de recursos permanentes depois de financiadas as necessidades cíclicas do ciclo de exploração. Passou a negativa em 2025, o que significa que parte do ciclo de exploração está a ser financiada por crédito de curto prazo.'},
+    {g:'Rendibilidade'},
+    {n:'Crescimento do volume de negócios', v:[0.2090,-0.0017,0.0997,0.0167,0.0372], pct:1, f:'(Vendas₍ₙ₎ ÷ Vendas₍ₙ₋₁₎) − 1',
+     d:'Variação anual das receitas totais. Mede a capacidade de gerar mais negócio, seja por preço, por tráfego ou por abertura de unidades. Depois do salto de recuperação pós-pandemia em 2021, o ritmo normalizou em torno de 2% a 4% ao ano.'},
+    {n:'Margem bruta', v:[0.5417,0.5697,0.5712,0.5675,0.5741], pct:1, f:'(Vendas − Custos diretos de exploração) ÷ Vendas',
+     d:'Percentagem de cada dólar de receita que sobra depois dos custos diretamente associados à operação dos restaurantes. Muito elevada e estável porque a maior parte das receitas são rendas e royalties de franquiados, que quase não têm custo direto.'},
+    {n:'Margem EBITDA', v:[0.52638,0.48492,0.53444,0.53275,0.54276], pct:1, f:'EBITDA ÷ Vendas',
+     d:'Rendibilidade operacional antes de depreciações, amortizações, juros e impostos. É a medida mais usada para comparar empresas entre si porque neutraliza políticas de amortização e estruturas de financiamento diferentes. Os 54,3% de 2025 são o valor mais alto do período e situam-se muito acima dos 23% a 30% da mediana dos pares, é o efeito direto do modelo franquiado.'},
+    {n:'Margem EBIT (operacional)', v:[0.4459,0.4042,0.4569,0.4519,0.4610], pct:1, f:'Resultado operacional ÷ Vendas',
+     d:'Igual à anterior mas já depois de depreciações e amortizações. Reflete o resultado que a atividade gera antes da estrutura de capital e da fiscalidade. Atingiu em 2025 o valor mais alto do período.'},
+    {n:'Margem líquida', v:[0.3249,0.2665,0.3322,0.3172,0.3185], pct:1, f:'Resultado líquido ÷ Vendas',
+     d:'Percentagem final das receitas que se transforma em lucro do acionista, já depois de juros e impostos. Acima de 30% é excecional em restauração e é consequência direta do modelo de franquia.'},
+    {n:'Juros e gastos de financiamento / EBIT', v:[0.1145,0.1288,0.1169,0.1286,0.1277], pct:1, f:'Juros suportados ÷ Resultado operacional',
+     d:'Parcela do resultado operacional absorvida pelo serviço da dívida. Quanto menor, maior a folga para remunerar o acionista e reinvestir.'},
+    {n:'Cobertura de juros', v:[8.7333,7.7639,8.5577,7.7769,7.8338], f:'Resultado operacional ÷ Juros suportados',
+     d:'Número de vezes que o resultado operacional cobre os juros do exercício. Acima de 5x é geralmente considerado confortável; a McDonald\u2019s mantém-se estável em torno de 8x apesar de uma dívida bruta de cerca de 40 mil milhões de dólares.'},
+    {g:'Endividamento e estrutura financeira'},
+    {n:'Autonomia financeira', v:[-0.0854,-0.1190,-0.0838,-0.0688,-0.0301], pct:1, f:'Capital próprio ÷ Ativo total',
+     d:'Proporção do ativo financiada por capitais próprios. É negativa porque as recompras de ações acumuladas (mais de 79 mil milhões em tesouraria) excedem os resultados retidos. Não sinaliza insolvência, sinaliza uma política agressiva de devolução de capital, mas elimina a almofada de balanço.'},
+    {n:'Solvabilidade', v:[-0.0787,-0.1064,-0.0773,-0.0644,-0.0292], pct:1, f:'Capital próprio ÷ Passivo total',
+     d:'Relação entre o que é dos acionistas e o que é de terceiros. Pela mesma razão do indicador anterior, apresenta-se negativa e tem vindo a aproximar-se de zero à medida que os resultados retidos crescem mais depressa que as recompras.'},
+    {n:'Endividamento', v:[1.0854,1.1190,1.0838,1.0688,1.0301], pct:1, f:'Passivo total ÷ Ativo total',
+     d:'Peso do passivo no financiamento do ativo. Superior a 1 é o espelho da autonomia financeira negativa.'},
+    {n:'Dívida líquida / EBITDA', v:[2.8930,3.4204,2.8902,3.0709,3.0505], f:'(Dívida financeira − Caixa) ÷ EBITDA',
+     d:'Número de anos de EBITDA necessários para amortizar integralmente a dívida líquida. É o indicador de alavancagem mais observado pelos credores; cerca de 3x é considerado moderado para um negócio defensivo e previsível como este.'},
+    {n:'Dívida líquida / Capital próprio', v:[-6.7189,-5.5501,-7.3865,-9.8338,-21.8867], f:'Dívida líquida ÷ Capital próprio',
+     d:'Sem significado económico útil neste caso, precisamente por o denominador ser negativo. É um bom exemplo de indicador que deve ser descartado quando a estrutura de capital é atípica.'},
+    {n:'ROE, rendibilidade dos capitais próprios', v:[-1.6399,-1.0290,-1.7993,-2.1657,-4.7811], pct:1, f:'Resultado líquido ÷ Capital próprio',
+     d:'Normalmente mede quanto rende cada euro investido pelo acionista. Com capital próprio negativo o rácio perde sentido económico e não deve ser usado nem para comparação com pares nem para avaliação.'},
+    {n:'ROA, rendibilidade do ativo', v:[0.1401,0.1225,0.1508,0.1490,0.1439], pct:1, f:'Resultado líquido ÷ Ativo total',
+     d:'Eficiência com que o conjunto dos ativos gera lucro, independentemente de como foram financiados. Estável em torno de 14% a 15%, um valor muito acima da média do setor.'},
+    {n:'ROIC, retorno sobre o capital investido', v:[0.1892,0.2820,0.2421,0.2838,0.2735], pct:1, f:'EBIT × (1 − taxa de imposto) ÷ Capital investido',
+     d:'O indicador central de criação de valor: mede o retorno gerado sobre o capital efetivamente afeto à operação. Só há criação de valor quando o ROIC excede o custo do capital (WACC). É a variável que alimenta o modelo EVA.'},
+    {n:'ROIC − WACC (spread)', v:[0.1210,0.2138,0.1739,0.2156,0.2053], pct:1, f:'ROIC − Custo médio ponderado do capital',
+     d:'Diferencial entre o que o capital rende e o que custa. Um spread positivo e persistente de cerca de 20 pontos percentuais é a evidência quantitativa de vantagem competitiva sustentada.'},
+    {g:'Atividade'},
+    {n:'Rotação do ativo', v:[0.4312,0.4596,0.4541,0.4697,0.4517], f:'Vendas ÷ Ativo total',
+     d:'Vendas geradas por cada dólar de ativo. É estruturalmente baixa porque o balanço está cheio de imobiliário e de ativos de direito de uso, e é precisamente esse imobiliário que sustenta a margem elevada.'},
+    {n:'PMR, prazo médio de recebimento (dias)', v:[29.429,33.300,35.621,33.557,33.479], f:'(Clientes ÷ Vendas) × 365',
+     d:'Dias que a empresa demora, em média, a receber dos seus clientes, aqui sobretudo franquiados, e não consumidores finais, que pagam a pronto.'},
+    {n:'PMP, prazo médio de pagamento (dias)', v:[34.529,35.866,36.827,33.504,36.624], f:'(Fornecedores ÷ Compras) × 365',
+     d:'Dias que a empresa demora a pagar aos seus fornecedores. Quando excede o PMR, os fornecedores estão a financiar o ciclo de exploração.'},
+    {n:'PMI, prazo médio de inventários (dias)', v:[1.9068,1.9027,1.7631,1.8234,1.9444], f:'(Inventários ÷ Custo das vendas) × 365',
+     d:'Dias de existências em armazém. Cerca de dois dias, o que é próprio de um negócio de produto fresco e de elevadíssima rotação.'},
+    {n:'Ciclo de caixa (dias)', v:[-3.1932,-0.6631,0.5568,1.8758,-1.2007], f:'PMR + PMI − PMP',
+     d:'Número de dias entre pagar aos fornecedores e receber dos clientes. Próximo de zero ou negativo significa que o ciclo de exploração se autofinancia, uma das razões pelas quais o negócio precisa de pouco fundo de maneio.'},
+    {g:'Mercado e retorno ao acionista'},
+    {n:'Resultado por ação (EPS, $)', v:[10.04,8.33,11.56,11.39,11.95], f:'Resultado líquido ÷ Nº médio de ações diluídas',
+     d:'Lucro atribuível a cada ação. Cresce por duas vias: aumento do resultado e redução do número de ações via recompras.'},
+    {n:'Dividendo por ação (DPS, $)', v:[5.25,5.66,6.23,6.78,7.17], f:'Dividendos declarados ÷ Nº de ações',
+     d:'Montante distribuído por ação. A McDonald\u2019s aumenta o dividendo há 49 anos consecutivos, desde 1976, o que faz do DPS uma variável particularmente previsível, é essa previsibilidade que torna o modelo de desconto de dividendos aplicável.'},
+    {n:'Cash flow por ação ($)', v:[12.521,10.857,14.266,14.296,15.022], f:'(Resultado líquido + Amortizações) ÷ Nº de ações',
+     d:'Meio libertado por ação, ou seja, o lucro acrescido dos gastos que não representam saída de caixa. Está sistematicamente acima do EPS, sinal de boa qualidade dos resultados.'},
+    {n:'PER, price earnings ratio', v:[26.700,31.636,25.650,25.451,25.576], f:'Cotação ÷ Resultado por ação',
+     d:'Número de anos de lucros correntes que o mercado está disposto a pagar pela ação. Serve para comparar a empresa com pares e com a sua própria série histórica: um PER acima da média histórica indica expectativas de crescimento acima do passado recente.'},
+    {n:'Capex / Vendas', v:[0.0878,0.0819,0.0925,0.1071,0.1252], pct:1, f:'Despesas de capital ÷ Vendas',
+     d:'Intensidade de investimento. A subida para 12,5% em 2025 é consequência direta do plano de expansão para 50.000 restaurantes até ao final de 2027 e é a razão pela qual o modelo assume capex de 3.700 a 4.000 M$ em 2026 e 2027.'}
+  ],
+
+  /* --- Z-Score --- */
+  z: {
+    anos:[2020,2021,2022,2023,2024,2025],
+    inputs:{},
+    comp:{
+      'A = Fundo de maneio / Ativo':[0.01306,-0.00281,0.00729,0.01073,0.02050,0.00850],
+      'B = Resultados retidos / Ativo':[1.02435,1.06834,1.18059,1.13061,1.21116,1.18091],
+      'C = EBIT / Ativo':[0.13917,0.19230,0.18580,0.20744,0.21224,0.20823],
+      'D = Valor de mercado do CP / Passivo':[2.66256,3.44768,3.46134,3.56815,3.54824,3.57148],
+      'E = Vendas / Ativo':[0.36498,0.43122,0.45965,0.45406,0.46972,0.45173]
+    },
+    pesos:{A:1.2,B:1.4,C:3.3,D:0.6,E:1.0},
+    score:[3.8715,4.6267,4.8112,4.8752,5.0193,4.9453],
+    setor:1.70
+  },
+
+  /* --- F-Score (Piotroski) --- */
+  f: {
+    anos:[2021,2022,2023,2024,2025],
+    score:[8,5,7,6,6],
+    classe:['Forte','Médio','Médio','Médio','Médio'],
+    criterios:[
+      ['1. ROA > 0, a empresa é rentável', [1,1,1,1,1]],
+      ['2. Cash flow operacional > 0', [1,1,1,1,1]],
+      ['3. ROA melhorou face ao ano anterior', [1,0,1,0,0]],
+      ['4. Cash flow operacional > Resultado líquido (qualidade dos resultados)', [1,1,1,1,1]],
+      ['5. Alavancagem diminuiu (dívida LP / ativo)', [1,0,1,0,1]],
+      ['6. Liquidez corrente melhorou', [1,0,0,1,0]],
+      ['7. Não houve emissão de novas ações', [0,1,1,1,1]],
+      ['8. Margem operacional melhorou', [1,0,1,0,1]],
+      ['9. Rotação do ativo melhorou', [1,1,0,1,0]]
+    ],
+    metricas:{
+      'ROA':[0.14010,0.12248,0.15084,0.14902,0.14388],
+      'Alavancagem (dívida LP / ativo)':[0.66146,0.71187,0.66171,0.69631,0.67165],
+      'Liquidez corrente':[1.77823,1.42663,1.16437,1.19114,0.95460],
+      'Margem operacional':[0.44594,0.40423,0.45685,0.45185,0.46096],
+      'Rotação do ativo':[0.43122,0.45965,0.45406,0.46972,0.45173]
+    },
+    setor:5
+  },
+
+  /* --- WACC --- */
+  wacc:{
+    rf:0.0476, erp:0.0482, beta:0.5215, ke:0.0728,
+    kd:0.0537, imposto:0.2047, kdliq:0.0427,
+    pesoCP:0.8482, pesoD:0.1518, valor:0.0682,
+    cov:0.000046079, varr:0.000088361
+  },
+
+  /* --- DCF --- */
+  dcf:{
+    linhas:[
+      ['Vendas',[27960.40,29905.42,31985.74,34210.77,36590.58]],
+      ['EBITDA',[14417.00,15419.89,16492.55,17639.83,18866.91]],
+      ['(−) Depreciações',[-2223.31,-2309.88,-2408.96,-2448.96,-2499.21]],
+      ['__EBIT',[12092.79,12934.00,13833.73,14796.05,15862.85]],
+      ['(−) Impostos sobre o EBIT',[-2474.92,-2647.08,-2831.22,-3028.17,-3246.50]],
+      ['(+) Depreciações',[2223.31,2309.88,2408.96,2448.96,2499.21]],
+      ['__Cash flow operacional',[11841.18,12596.80,13411.47,14216.84,15115.56]],
+      ['(−) Variação das necessidades de fundo de maneio',[-730.56,-42.54,-45.50,-48.67,-52.05]],
+      ['(−) Capex',[-3700,-4000,-3091.25,-3306.29,-3536.28]],
+      ['__Free cash flow to firm',[7410.62,8554.25,10274.72,10861.88,11527.22]],
+      ['Fator de desconto',[0.9362,0.8764,0.8204,0.7681,0.7190]],
+      ['__Valor atual do FCFF',[6937.82,7496.96,8429.38,8342.82,8288.07]]
+    ],
+    g:0.02, wacc:0.0682,
+    valorResidual:248501.58,
+    vaValorResidual:178679.60,
+    somaVaFcff:39495.05,
+    ev:218174.65,
+    dividaLiq:39199, minoritarios:0,
+    valorCP:178975.65, acoes:716.4, valorAcao:249.8264,
+    sensWacc:[0.0582,0.0632,0.0682,0.0732,0.0782],
+    sensG:[0.01,0.015,0.02,0.025,0.03],
+    sensGrid:[
+      [270.5135,297.6661,331.8665,376.2990,436.4061],
+      [238.7911,260.0037,286.0746,318.9116,361.5716],
+      [212.5597,229.4623,249.8264,274.8542,306.3770],
+      [190.4607,204.1434,220.3578,239.8916,263.8976],
+      [171.6357,182.8650,195.9877,211.5378,230.2705]
+    ],
+    baseI:2, baseJ:2
+  },
+
+  /* --- EVA --- */
+  eva:{
+    linhas:[
+      ['Capital investido',[40133.25,41135.35,41820.60,42681.10,43721.55]],
+      ['EBIT × (1 − t)',[9617.87,10286.92,11002.51,11767.88,12616.34]],
+      ['ROIC',[0.2396,0.2501,0.2631,0.2757,0.2886],'pct'],
+      ['Custo do capital (WACC)',[0.0682,0.0682,0.0682,0.0682,0.0682],'pct'],
+      ['__EVA = (ROIC − WACC) × Capital investido',[6880.95,7481.66,8150.52,8857.21,9634.71]],
+      ['Fator de desconto',[0.9362,0.8764,0.8204,0.7681,0.7190]],
+      ['__Valor atual do EVA',[6441.65,6556.86,6687.02,6802.88,6927.36]]
+    ],
+    vrEbit:12868.67, vrCapital:44810.67, vrRoic:0.2872, vrWacc:0.0682, vrG:0.02,
+    vrEva2030:9812.77, valorResidual:203601.82, vaValorResidual:146395.58,
+    mva:179811.35, capital2026:40133.25, ev:219944.60,
+    dividaLiq:39199, minoritarios:0, valorCP:180745.60, valorAcao:252.2970,
+    sensWacc:[0.0583,0.0633,0.0682,0.0733,0.0783],
+    sensG:[0.01,0.015,0.02,0.025,0.03],
+    sensGrid:[
+      [258.4495,284.2190,316.7168,358.9736,416.1623],
+      [234.4836,255.1045,280.4877,312.4984,354.1219],
+      [215.0073,231.8997,252.2971,277.4165,309.1124],
+      [197.9101,211.8573,228.4213,248.4146,273.0253],
+      [183.6395,195.3578,209.0861,225.3901,245.0696]
+    ],
+    baseI:2, baseJ:2
+  },
+
+  /* --- Total Payout Model --- */
+  tpm:{
+    precoRecompra:252.53, g:0.02, ke:0.07276, payout:0.62255, buybackTaxa:-0.00915,
+    dps2025:7.17, acoes2025:716.4,
+    linhas:[
+      ['Nº de ações (M)',[709.84,703.35,696.91,690.53,684.21]],
+      ['Recompra de ações (M$) = (ações t−1 − ações t) × preço',[1655.61,1640.46,1625.45,1610.57,1595.83]],
+      ['Recompra por ação ($)',[2.3324,2.3324,2.3324,2.3324,2.3324]],
+      ['Dividendo por ação ($)',[7.3795,7.9657,8.5985,9.2816,10.0189]],
+      ['__Total payout por ação ($)',[9.7118,10.2981,10.9309,11.6139,12.3513]],
+      ['Fator de desconto',[0.9322,0.8690,0.8100,0.7551,0.7039]],
+      ['__Valor atual do total payout ($)',[9.0531,8.9485,8.8542,8.7694,8.6936]]
+    ],
+    somaVp:44.3189, payoutTerminal:12.5983, valorResidual:238.7913, vpValorResidual:168.0770,
+    valorAcao:212.3959,
+    ddmSoDividendos:171.1641,
+    sensKe:[0.0628,0.0678,0.07276,0.0778,0.0828],
+    sensG:[0.01,0.015,0.02,0.025,0.03],
+    sensGrid:[
+      [219.80925,238.98771,262.64713,292.56565,331.60567],
+      [200.40921,215.97462,234.79638,258.01576,287.37783],
+      [184.22916,197.09337,212.39591,230.90258,253.73742],
+      [170.21143,180.95973,193.56760,208.56333,226.69623],
+      [158.23178,167.33359,177.88474,190.26134,204.98199]
+    ],
+    baseI:2, baseJ:2
+  },
+
+  /* --- Múltiplos --- */
+  mult:{
+    pares:[
+      ['Restaurant Brands Intl.','QSR',24.20,15.18,4.14,3.36,0.27273,0.13884],
+      ['Yum! Brands','YUM',29.49,19.45,6.49,5.29,0.33368,0.17938],
+      ["Wendy's",'WEN',8.86,9.80,2.45,0.75,0.25000,0.08465],
+      ["Domino's Pizza",'DPZ',24.36,18.12,3.90,2.96,0.21523,0.12151],
+      ['Wingstop','WING',38.72,25.86,11.13,9.93,0.43039,0.25646]
+    ],
+    mediana:[24.36,18.12,4.14,3.36,0.27273,0.13884],
+    mcd:[26.08,18.78,10.30,8.35,0.54276,0.31850],
+    ajuste:{
+      evebitdaPares:18.12, margemEbitdaMcd:0.54276, evSalesAjustado:9.83474,
+      peEPares:24.36, margemLiquidaMcd:0.31850, psAjustado:7.75878,
+      vendas:26885,
+      evSalesAjustadoEV:264407.04, evSalesAjustadoCP:225208.04, evSalesAjustadoAcao:314.36075,
+      psAjustadoCP:208594.68, psAjustadoAcao:291.17069
+    },
+    aplicacao:[
+      {id:'pe',  nome:'P/E',       base:'Resultado líquido', valorBase:8563,  mult:24.36, ev:247793.68, cp:208594.68, acao:291.1707},
+      {id:'evebitda', nome:'EV/EBITDA', base:'EBITDA',       valorBase:14592, mult:18.12, ev:264407.04, cp:225208.04, acao:314.3607},
+      {id:'evsales',  nome:'EV/Sales ajustado', base:'Vendas', valorBase:26885, mult:9.83474, ev:264407.04, cp:225208.04, acao:314.3607},
+      {id:'psajust',  nome:'P/S ajustado',      base:'Vendas', valorBase:26885, mult:7.75878, ev:247793.68, cp:208594.68, acao:291.1707}
+    ],
+    media:302.7657,
+    ativosPorDefeito:['pe','evebitda','evsales','psajust']
+  },
+
+  /* --- síntese --- */
+  metodos:[
+    {id:'dcf',  nome:'DCF (fluxos de caixa descontados)',  curto:'DCF',          valor:249.8264, peso:0.30, min:220.3578, max:286.0746},
+    {id:'eva',  nome:'EVA (valor económico acrescentado)', curto:'EVA',          valor:252.2970, peso:0.30, min:222.3200, max:287.7700},
+    {id:'tpm',  nome:'DDM Total Payout Model',             curto:'DDM Total Payout', valor:212.3959, peso:0.10, min:193.5676, max:234.7964},
+    {id:'mult', nome:'Múltiplos de mercado',               curto:'Múltiplos',    valor:302.7657, peso:0.30, min:302.7657, max:302.7657}
+  ],
+  analistas:[['Morgan Stanley',319],['Citi',345],['JPMorgan',325],['Deutsche Bank',364]],
+  analistasMedia:338.25
+};
+
+/* ============================================================
+   UTILITÁRIOS
+   ============================================================ */
+const fmt = (v,d=1)=> v===null||v===undefined||isNaN(v) ? '—' :
+  v.toLocaleString('pt-PT',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct = (v,d=1)=> v===null||v===undefined||isNaN(v) ? '—' : (v*100).toLocaleString('pt-PT',{minimumFractionDigits:d,maximumFractionDigits:d})+'%';
+const sig = v => (v>0?'+':'') + pct(v,1);
+const cls = v => v<0 ? 'neg' : (v>0 ? 'pos' : '');
+const el = (t,a={},...kids)=>{
+  const n=document.createElement(t);
+  for(const k in a){
+    if(k==='html') n.innerHTML=a[k];
+    else if(k==='text') n.textContent=a[k];
+    else if(k.startsWith('on')) n.addEventListener(k.slice(2),a[k]);
+    else n.setAttribute(k,a[k]);
+  }
+  kids.flat().forEach(c=>c&&n.appendChild(typeof c==='string'?document.createTextNode(c):c));
+  return n;
+};
+const tip = document.getElementById('tip');
+function showTip(e,html){tip.innerHTML=html;tip.style.opacity=1;moveTip(e);}
+function moveTip(e){
+  const r=tip.getBoundingClientRect();
+  let x=e.clientX+14, y=e.clientY-r.height-10;
+  if(x+r.width>window.innerWidth-8) x=e.clientX-r.width-14;
+  if(y<8) y=e.clientY+18;
+  tip.style.left=x+'px';tip.style.top=y+'px';
+}
+function hideTip(){tip.style.opacity=0;}
+
+/* ============================================================
+   MOTOR DE GRÁFICOS (SVG, sem dependências)
+   ============================================================ */
+const PAL = ['#A81E15','#20495F','#A97A08','#1C6549','#7A6A8A'];
+
+function svgChart(w,h){
+  const s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  s.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  s.setAttribute('class','chart');
+  s.setAttribute('preserveAspectRatio','xMidYMid meet');
+  return s;
+}
+const SN=(t,a={})=>{const n=document.createElementNS('http://www.w3.org/2000/svg',t);for(const k in a)n.setAttribute(k,a[k]);return n;};
+
+function niceScale(min,max,ticks=5){
+  if(min===max){max=min+1;}
+  const span=max-min, step0=span/ticks, mag=Math.pow(10,Math.floor(Math.log10(step0)));
+  const norm=step0/mag; let step;
+  if(norm<=1)step=1;else if(norm<=2)step=2;else if(norm<=2.5)step=2.5;else if(norm<=5)step=5;else step=10;
+  step*=mag;
+  return {lo:Math.floor(min/step)*step, hi:Math.ceil(max/step)*step, step};
+}
+
+/* gráfico de barras (agrupadas ou empilhadas) + linhas opcionais */
+function chartBars(opts){
+  const {labels, series, stacked=false, lines=[], w=720, h=300, unit='', dec=0, zeroBase=true,
+         showValues=false, valueFmt=null, totals=false} = opts;
+  const vfmt = valueFmt || (v=>fmt(v,dec));
+  const m={t:showValues?26:16,r:16,b:30,l:56}, iw=w-m.l-m.r, ih=h-m.t-m.b;
+  let vmax=0, vmin=0;
+  if(stacked){
+    labels.forEach((_,i)=>{let s=0;series.forEach(se=>s+=se.data[i]||0);vmax=Math.max(vmax,s);});
+  } else {
+    series.forEach(se=>se.data.forEach(v=>{vmax=Math.max(vmax,v);vmin=Math.min(vmin,v);}));
+  }
+  lines.forEach(l=>l.data.forEach(v=>{if(v!=null){vmax=Math.max(vmax,v);vmin=Math.min(vmin,v);}}));
+  if(zeroBase) vmin=Math.min(0,vmin);
+  const sc=niceScale(vmin,vmax,5);
+  const y=v=>m.t+ih-((v-sc.lo)/(sc.hi-sc.lo))*ih;
+  const bw=iw/labels.length;
+  const s=svgChart(w,h);
+  for(let v=sc.lo;v<=sc.hi+1e-9;v+=sc.step){
+    s.appendChild(SN('line',{x1:m.l,x2:m.l+iw,y1:y(v),y2:y(v),stroke:'#E9ECEA','shape-rendering':'crispEdges'}));
+    const t=SN('text',{x:m.l-8,y:y(v)+3.5,'text-anchor':'end'});t.textContent=fmt(v,dec);s.appendChild(t);
+  }
+  labels.forEach((lb,i)=>{
+    const cx=m.l+bw*i+bw/2;
+    const t=SN('text',{x:cx,y:h-10,'text-anchor':'middle'});t.textContent=lb;s.appendChild(t);
+    if(stacked){
+      let acc=0;
+      series.forEach((se,k)=>{
+        const v=se.data[i]||0, y0=y(acc), y1=y(acc+v);
+        const r=SN('rect',{x:cx-bw*0.32,y:Math.min(y0,y1),width:bw*0.64,height:Math.abs(y1-y0),fill:se.color||PAL[k%5]});
+        r.addEventListener('mousemove',e=>showTip(e,`<b>${lb}</b> · ${se.name}<br>${fmt(v,dec)} ${unit}`));
+        r.addEventListener('mouseleave',hideTip);
+        s.appendChild(r);
+        if(showValues && Math.abs(y1-y0)>14){
+          const tv=SN('text',{x:cx,y:(y0+y1)/2+3.6,'text-anchor':'middle',fill:'#fff','font-size':'9.5','font-weight':'600'});
+          tv.textContent=vfmt(v); s.appendChild(tv);
+        }
+        acc+=v;
+      });
+      if(totals){
+        const tt=SN('text',{x:cx,y:y(acc)-6,'text-anchor':'middle',fill:'#15181A','font-size':'10.5','font-weight':'700'});
+        tt.textContent=vfmt(acc); s.appendChild(tt);
+      }
+    } else {
+      const n=series.length, gw=bw*0.68/n;
+      series.forEach((se,k)=>{
+        const v=se.data[i]; if(v==null)return;
+        const y0=y(0),y1=y(v);
+        const r=SN('rect',{x:cx-bw*0.34+gw*k,y:Math.min(y0,y1),width:gw*0.86,height:Math.max(1,Math.abs(y1-y0)),fill:se.color||PAL[k%5]});
+        r.addEventListener('mousemove',e=>showTip(e,`<b>${lb}</b> · ${se.name}<br>${fmt(v,dec)} ${unit}`));
+        r.addEventListener('mouseleave',hideTip);
+        s.appendChild(r);
+        if(showValues){
+          const tv=SN('text',{x:cx-bw*0.34+gw*k+gw*0.43,y:Math.min(y0,y1)-5,'text-anchor':'middle',fill:'#15181A','font-size':'10','font-weight':'600'});
+          tv.textContent=vfmt(v); s.appendChild(tv);
+        }
+      });
+    }
+  });
+  lines.forEach((ln,k)=>{
+    const pts=ln.data.map((v,i)=>v==null?null:[m.l+bw*i+bw/2,y(v)]).filter(Boolean);
+    s.appendChild(SN('polyline',{points:pts.map(p=>p.join(',')).join(' '),fill:'none',stroke:ln.color||PAL[(k+2)%5],'stroke-width':2,'stroke-dasharray':ln.dash||''}));
+    pts.forEach((p,i)=>{
+      const c=SN('circle',{cx:p[0],cy:p[1],r:3.2,fill:'#fff',stroke:ln.color||PAL[(k+2)%5],'stroke-width':2});
+      c.addEventListener('mousemove',e=>showTip(e,`<b>${labels[i]}</b> · ${ln.name}<br>${ln.pct?pct(ln.data[i],1):fmt(ln.data[i],ln.dec??dec)} ${ln.pct?'':unit}`));
+      c.addEventListener('mouseleave',hideTip);
+      s.appendChild(c);
+    });
+  });
+  s.appendChild(SN('line',{x1:m.l,x2:m.l+iw,y1:y(Math.max(sc.lo,0)),y2:y(Math.max(sc.lo,0)),stroke:'#B9BFBC','shape-rendering':'crispEdges'}));
+  return s;
+}
+
+/* gráfico de linhas */
+function chartLines(opts){
+  const {labels, series, w=720, h=300, unit='', dec=1, asPct=false, bands=[]} = opts;
+  const m={t:16,r:16,b:30,l:52}, iw=w-m.l-m.r, ih=h-m.t-m.b;
+  let vmax=-Infinity,vmin=Infinity;
+  series.forEach(se=>se.data.forEach(v=>{if(v==null)return;vmax=Math.max(vmax,v);vmin=Math.min(vmin,v);}));
+  bands.forEach(b=>{vmax=Math.max(vmax,b.to);vmin=Math.min(vmin,b.from);});
+  const pad=(vmax-vmin)*0.12||1;
+  const sc=niceScale(vmin-pad,vmax+pad,5);
+  const y=v=>m.t+ih-((v-sc.lo)/(sc.hi-sc.lo))*ih;
+  const x=i=>m.l+(labels.length===1?iw/2:iw*i/(labels.length-1));
+  const s=svgChart(w,h);
+  bands.forEach(b=>{
+    s.appendChild(SN('rect',{x:m.l,y:y(b.to),width:iw,height:Math.abs(y(b.from)-y(b.to)),fill:b.color,opacity:.5}));
+    const t=SN('text',{x:m.l+6,y:y(b.to)+13,fill:'#6E767B'});t.textContent=b.label;s.appendChild(t);
+  });
+  for(let v=sc.lo;v<=sc.hi+1e-9;v+=sc.step){
+    s.appendChild(SN('line',{x1:m.l,x2:m.l+iw,y1:y(v),y2:y(v),stroke:'#E9ECEA','shape-rendering':'crispEdges'}));
+    const t=SN('text',{x:m.l-8,y:y(v)+3.5,'text-anchor':'end'});t.textContent=asPct?pct(v,0):fmt(v,dec);s.appendChild(t);
+  }
+  labels.forEach((lb,i)=>{const t=SN('text',{x:x(i),y:h-10,'text-anchor':'middle'});t.textContent=lb;s.appendChild(t);});
+  series.forEach((se,k)=>{
+    const col=se.color||PAL[k%5];
+    const pts=se.data.map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);
+    s.appendChild(SN('polyline',{points:pts.map(p=>p.join(',')).join(' '),fill:'none',stroke:col,'stroke-width':2.2,'stroke-dasharray':se.dash||'','stroke-linejoin':'round'}));
+    se.data.forEach((v,i)=>{
+      if(v==null)return;
+      const c=SN('circle',{cx:x(i),cy:y(v),r:3.4,fill:'#fff',stroke:col,'stroke-width':2});
+      c.addEventListener('mousemove',e=>showTip(e,`<b>${labels[i]}</b> · ${se.name}<br>${asPct?pct(v,1):fmt(v,dec)+' '+unit}`));
+      c.addEventListener('mouseleave',hideTip);
+      s.appendChild(c);
+    });
+  });
+  return s;
+}
+
+function legend(items){
+  return el('div',{class:'legend'},...items.map(it=>el('span',{html:`<i style="background:${it.color}"></i>${it.name}`})));
+}
+</script>
+
+
+<script>
+/* ============================================================
+   COMPONENTES REUTILIZÁVEIS
+   ============================================================ */
+function panel(title, sub, ...kids){
+  const p=el('section',{class:'panel'});
+  if(title) p.appendChild(el('h3',{text:title}));
+  if(sub) p.appendChild(el('p',{class:'sub',html:sub}));
+  kids.flat().forEach(k=>k&&p.appendChild(k));
+  return p;
+}
+function kpis(list){
+  return el('dl',{class:'kpis'},...list.map(k=>el('div',{class:'kpi'},
+    el('dt',{text:k[0]}), el('dd',{html:k[1]+(k[2]?` <span class="foot">${k[2]}</span>`:'')})
+  )));
+}
+/* tabela genérica: linhas ['nome',[hist],[proj]], '__' negrito, '#' cabeçalho de bloco */
+function tableRows(rows, headHist, headProj){
+  const t=el('table');
+  const thead=el('thead');
+  const tr=el('tr'); tr.appendChild(el('th',{text:''}));
+  headHist.forEach(a=>tr.appendChild(el('th',{text:a})));
+  (headProj||[]).forEach(a=>tr.appendChild(el('th',{class:'proj',text:a+'E'})));
+  thead.appendChild(tr); t.appendChild(thead);
+  const tb=el('tbody');
+  rows.forEach(r=>{
+    let name=r[0];
+    if(name.startsWith('#')){
+      const x=el('tr',{class:'head-row'});
+      x.appendChild(el('td',{colspan:1+headHist.length+((headProj||[]).length),text:name.slice(1)}));
+      tb.appendChild(x); return;
+    }
+    const strong=name.startsWith('__'); if(strong)name=name.slice(2);
+    const x=el('tr',strong?{class:'sum'}:{});
+    x.appendChild(el('td',{text:name}));
+    if(r[3]==='pct'){
+      (r[1]||[]).forEach(v=>x.appendChild(el('td',{class:'num',text:pct(v,2)})));
+      (r[2]||[]).forEach(v=>x.appendChild(el('td',{class:'num proj',text:pct(v,2)})));
+      tb.appendChild(x); return;
+    }
+    let dec=0;
+    if(/Fator/.test(name)) dec=4;
+    else if(/\(\$\)|por ação/.test(name)) dec=2;
+    else if(/\(M\)/.test(name)) dec=1;
+    (r[1]||[]).forEach(v=>x.appendChild(el('td',{class:'num '+(v<0?'neg':''),text:fmt(v,dec)})));
+    (r[2]||[]).forEach(v=>x.appendChild(el('td',{class:'num proj '+(v<0?'neg':''),text:fmt(v,dec)})));
+    if(!r[2] && headProj) headProj.forEach(()=>x.appendChild(el('td',{class:'proj',text:'—'})));
+    tb.appendChild(x);
+  });
+  t.appendChild(tb);
+  return el('div',{class:'tw'},t);
+}
+/* tabela de sensibilidade interativa */
+function sensTable(cfg){
+  const {rows, cols, grid, baseI, baseJ, rowLabel, colLabel, rowFmt=v=>pct(v,2), colFmt=v=>pct(v,2), preco=M.precoRef} = cfg;
+  const out=el('div',{class:'sens-out'});
+  const t=el('table',{class:'sens'});
+  const thead=el('thead'), hr=el('tr');
+  hr.appendChild(el('th',{html:`${rowLabel} <span style="color:#B9BFBC">╲</span> ${colLabel}`}));
+  cols.forEach(c=>hr.appendChild(el('th',{text:colFmt(c)})));
+  thead.appendChild(hr); t.appendChild(thead);
+  const tb=el('tbody');
+  const cells=[];
+  rows.forEach((r,i)=>{
+    const tr=el('tr'); tr.appendChild(el('th',{style:'text-align:left',text:rowFmt(r)}));
+    cols.forEach((c,j)=>{
+      const td=el('td',{class:(i===baseI&&j===baseJ)?'base':'',text:fmt(grid[i][j],2),tabindex:'0',role:'button',
+        'aria-label':`${rowLabel} ${rowFmt(r)}, ${colLabel} ${colFmt(c)}: ${fmt(grid[i][j],2)} dólares`});
+      const pick=()=>{cells.forEach(x=>x.classList.remove('sel'));td.classList.add('sel');render(i,j);};
+      td.addEventListener('click',pick);
+      td.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});
+      cells.push(td); tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+  t.appendChild(tb);
+  function render(i,j){
+    const v=grid[i][j], d=v/preco-1;
+    out.innerHTML=`Com ${rowLabel} de <b style="font-size:14px">${rowFmt(rows[i])}</b> e ${colLabel} de <b style="font-size:14px">${colFmt(cols[j])}</b>:
+      valor por ação de <b>${fmt(v,2)} $</b> <span class="${cls(d)}" style="font-weight:600">${sig(d)}</span> face à cotação de ${fmt(preco,2)} $.`;
+  }
+  render(baseI,baseJ);
+  cells[baseI*cols.length+baseJ].classList.add('sel');
+  return el('div',{},el('div',{class:'tw'},t),out,
+    el('p',{class:'hint',text:'Clique em qualquer célula para ler o valor por ação e o desvio face à cotação.'}));
+}
+/* ponte de valor: EV → valor por ação */
+function bridge(items){
+  const t=el('table');
+  const tb=el('tbody');
+  items.forEach(([n,v,strong,d])=>{
+    const tr=el('tr',strong?{class:'sum'}:{});
+    tr.appendChild(el('td',{text:String(n).replace(/^__/,'')}));
+    tr.appendChild(el('td',{class:'num '+(v<0?'neg':''),text:typeof v==='string'?v:fmt(v,d??1)}));
+    tb.appendChild(tr);
+  });
+  t.appendChild(tb);
+  return t;
+}
+
+/* ============================================================
+   VISTAS
+   ============================================================ */
+const VIEWS = [];
+const V = (id,label,title,sub,build)=>VIEWS.push({id,label,title,sub,build});
+
+/* gráfico de cotação com área preenchida e linha de referência */
+function chartCotacao(serie, ref, w=420, h=250){
+  const m={t:26,r:12,b:26,l:44}, iw=w-m.l-m.r, ih=h-m.t-m.b;
+  const vals=serie.map(p=>p[1]);
+  const sc=niceScale(Math.min(...vals,ref)*0.97, Math.max(...vals,ref)*1.03, 4);
+  const y=v=>m.t+ih-((v-sc.lo)/(sc.hi-sc.lo))*ih;
+  const x=i=>m.l+(iw*i/(serie.length-1));
+  const s=svgChart(w,h);
+  for(let v=sc.lo;v<=sc.hi+1e-9;v+=sc.step){
+    s.appendChild(SN('line',{x1:m.l,x2:m.l+iw,y1:y(v),y2:y(v),stroke:'#E9ECEA','shape-rendering':'crispEdges'}));
+    const t=SN('text',{x:m.l-7,y:y(v)+3.5,'text-anchor':'end','font-size':'10'});
+    t.textContent=fmt(v,0); s.appendChild(t);
+  }
+  const pts=serie.map((p,i)=>[x(i),y(p[1])]);
+  s.appendChild(SN('path',{d:`M${m.l},${m.t+ih} L`+pts.map(p=>p.join(',')).join(' L')+` L${m.l+iw},${m.t+ih} Z`,fill:'#20495F',opacity:.12}));
+  s.appendChild(SN('polyline',{points:pts.map(p=>p.join(',')).join(' '),fill:'none',stroke:'#20495F','stroke-width':1.8,'stroke-linejoin':'round'}));
+  s.appendChild(SN('line',{x1:m.l,x2:m.l+iw,y1:y(ref),y2:y(ref),stroke:'#A81E15','stroke-width':1.2,'stroke-dasharray':'5 3'}));
+  const tr=SN('text',{x:m.l+iw,y:y(ref)-5,'text-anchor':'end',fill:'#A81E15','font-size':'10.5','font-weight':'600'});
+  tr.textContent=fmt(ref,2)+' $'; s.appendChild(tr);
+  let ultimoAno=null;
+  serie.forEach((p,i)=>{
+    const ano=p[0].slice(0,4);
+    if(ano!==ultimoAno && p[0].slice(5)==='01'){
+      ultimoAno=ano;
+      s.appendChild(SN('line',{x1:x(i),x2:x(i),y1:m.t,y2:m.t+ih,stroke:'#E9ECEA','shape-rendering':'crispEdges'}));
+      const t=SN('text',{x:x(i),y:h-8,'text-anchor':'middle','font-size':'10'});
+      t.textContent=ano; s.appendChild(t);
+    }
+  });
+  serie.forEach((p,i)=>{
+    const hit=SN('rect',{x:x(i)-iw/serie.length/2,y:m.t,width:iw/serie.length,height:ih,fill:'transparent'});
+    hit.addEventListener('mousemove',e=>showTip(e,`<b>${p[0]}</b><br>${fmt(p[1],2)} $`));
+    hit.addEventListener('mouseleave',hideTip);
+    s.appendChild(hit);
+  });
+  return s;
+}
+
+/* ---------- 1. A EMPRESA ---------- */
+V('empresa','A empresa','A empresa, o negócio e quem manda',
+  'O que a McDonald\u2019s é, o que vende, como está organizada e quem detém e dirige o capital.',
+  ()=>{
+  const f=document.createDocumentFragment();
+  f.appendChild(kpis([
+    ['Restaurantes (fecho 2025)','45.356','&gt;100 países'],
+    ['Franquiados','~95%','da rede'],
+    ['Receitas 2025','26.885 M$','+4% reportado'],
+    ['Vendas do sistema','139.364 M$','+7%'],
+    ['Resultado líquido','8.563 M$','EPS 11,95 $'],
+    ['ROIC 2025','27,4%','vs WACC 6,82%']
+  ]));
+
+  const logoImg=el('img',{src:LOGO_MCD,alt:'Logótipo da McDonald\u2019s',
+    style:'max-width:100%;max-height:150px;display:block;margin:0 auto'});
+  const logoPh=el('div',{class:'logo-ph',hidden:'hidden',text:'Logótipo indisponível.'});
+  logoImg.addEventListener('error',()=>{logoImg.remove();logoPh.removeAttribute('hidden');});
+  const aside=el('aside',{},
+    el('div',{class:'logo-box'},logoImg,logoPh),
+    el('div',{style:'border:1px solid var(--rule);background:var(--panel);border-radius:2px;padding:14px 14px 8px'},
+      el('div',{style:'font-size:12.5px;color:var(--muted);margin-bottom:6px',text:'Cotação mensal de fecho, dez-2021 a ago-2026'}),
+      chartCotacao(M.cotacoes, M.precoRef),
+      el('p',{class:'hint',style:'margin:4px 0 0',text:'A linha tracejada marca a cotação de referência da avaliação, 252,53 $. Fonte: investing.com.'})
+    ));
+
+  f.appendChild(panel('O que é e o que faz',null, el('div',{class:'grid g-7-5'}, el('div',{class:'prose'},
+    el('p',{class:'lede',text:'A McDonald\u2019s é a maior cadeia de restauração rápida do mundo e, na prática, tanto é uma marca global de restauração como um dos maiores proprietários de imobiliário comercial do planeta.'}),
+    el('p',{text:'O negócio assenta num modelo quase totalmente franquiado: cerca de 95% dos 45.356 restaurantes são detidos e operados por franquiados independentes. A empresa não vende sobretudo hambúrgueres, vende o direito de os vender. Cobra rendas e royalties sobre as vendas dos franquiados, o que gera receitas previsíveis, de baixa intensidade de capital e com margens muito superiores às da generalidade dos concorrentes.'}),
+    el('p',{text:'A base desse modelo é o imobiliário: a empresa detém cerca de 56% dos terrenos e 80% dos edifícios do seu portfólio consolidado, e os contratos de franquia têm tipicamente 20 anos. É esta camada patrimonial que sustenta simultaneamente o poder negocial junto do franquiado e a estabilidade do fluxo de rendas.'}),
+    el('p',{text:'A ação atingiu mínimos nos meses mais recentes, penalizada pelo menor consumo nos restaurantes dos Estados Unidos, por uma concorrência intensa no setor e por sinais de deterioração da saúde financeira de parte da rede de franquiados.'})
+  ), aside)));
+
+  const mix=[['Rendas de franquiados',10442,38.8],['Vendas de lojas próprias',9690,36.0],['Royalties',6018,22.4],['Outras receitas tecnológicas e digitais',647,2.4],['Taxas iniciais de franquia',88,0.3]];
+  const mixTable=el('table');
+  mixTable.appendChild(el('thead',{},el('tr',{},el('th',{text:'Componente de receita (2025)'}),el('th',{text:'M$'}),el('th',{text:'% do total'}))));
+  mixTable.appendChild(el('tbody',{},...mix.map(m=>el('tr',{},el('td',{text:m[0]}),el('td',{class:'num',text:fmt(m[1],0)}),el('td',{class:'num',text:fmt(m[2],1)+'%'})))));
+
+  f.appendChild(el('div',{class:'grid g2'},
+    panel('O que vende', null, el('div',{class:'prose'},
+      el('p',{text:'O menu global assenta em hambúrgueres e sanduíches de frango, com destaque para o Big Mac e o Quarter Pounder with Cheese, em batatas fritas, itens de pequeno-almoço como o Egg McMuffin, gelados e bebidas sob a marca McCafé, que compete diretamente com a Starbucks e a Dunkin\u2019. A esta base junta-se uma extensa oferta de personalização local adaptada ao gosto de cada mercado.'}),
+      el('p',{text:'Cada vez mais, porém, o que diferencia a empresa não é o produto alimentar mas a camada digital e de formato que envolve a compra: a aplicação móvel e o programa MyMcDonald\u2019s Rewards, os quiosques de autoatendimento presentes em mais de 30.000 restaurantes, o drive thru, ainda é o principal canal de venda nos Estados Unidos e com a integração com a Uber Eats, a DoorDash e a Grubhub.'}),
+      el('p',{html:'<strong>Três iniciativas de produto em curso:</strong> frango (McCrispy e regresso dos Snack Wraps aos EUA), carne de vaca (programa Best Burger em 85 mercados; Big Arch no Reino Unido) e bebidas (nova gama McCafé nos EUA, após piloto em mais de 500 restaurantes).'})
+    )),
+    panel('Como ganha dinheiro', 'Decomposição das receitas de 2025.', el('div',{class:'tw'},mixTable))
+  ));
+
+  const g1=chartBars({labels:M.anos.map(String),
+    series:[{name:'Estados Unidos',data:M.regiao.EUA,color:PAL[0]},{name:'IOM',data:M.regiao.IOM,color:PAL[1]},{name:'IDL e Corporativo',data:M.regiao.IDL,color:PAL[3]}],
+    stacked:true,unit:'M$',dec:0,h:340,showValues:true,totals:true,valueFmt:v=>fmt(v,0)});
+  f.appendChild(panel('Receitas por região, 2020-2025',null,
+    g1, legend([{name:'Estados Unidos',color:PAL[0]},{name:'IOM',color:PAL[1]},{name:'IDL e Corporativo',color:PAL[3]}])
+  ));
+
+  const g1b=chartBars({labels:M.anos.map(String),
+    series:[{name:'Estados Unidos',data:M.resOperacionalRegiao.EUA,color:PAL[0]},
+            {name:'IOM',data:M.resOperacionalRegiao.IOM,color:PAL[1]},
+            {name:'IDL e Corporativo',data:M.resOperacionalRegiao.IDL,color:PAL[3]}],
+    stacked:true,unit:'M$',dec:0,h:340,showValues:true,totals:true,valueFmt:v=>fmt(v,0)});
+  f.appendChild(panel('Resultado operacional por região, 2020-2025',null,
+    g1b, legend([{name:'Estados Unidos',color:PAL[0]},{name:'IOM',color:PAL[1]},{name:'IDL e Corporativo',color:PAL[3]}])
+  ));
+
+  f.appendChild(el('div',{class:'grid g2'},
+    panel('Liderança executiva',null, el('div',{class:'people'},
+      person('CK','Chris Kempczinski','57 anos · Chairman desde maio de 2024, CEO desde novembro de 2019 · 10 anos na empresa','Acumula a presidência do conselho de administração e a direção executiva. A remuneração variável está ligada não apenas a metas financeiras, mas também a metas de diversidade, envolvimento dos colaboradores e inovação digital das franquias.'),
+      person('IB','Ian Borden','57 anos · CFO global desde setembro de 2022 · mais de 30 anos na empresa','Foi Presidente International entre janeiro de 2020 e agosto de 2022. É a voz do guidance financeiro para 2026-2027.'),
+      person('SA','Skye Anderson','Presidente McDonald\u2019s USA, nomeada no decurso de 2026','Sucede a Joseph Erlinger (23 anos de casa). A nomeação foi anunciada com os resultados do 2.º trimestre de 2026, a 4 de agosto.'),
+      person('MS','Manu Steijaert','55 anos · Presidente IOM desde maio de 2025','Já tinha ocupado o cargo entre 2019 e 2021; foi Global Chief Customer Officer de agosto de 2021 a maio de 2025.')
+    )),
+    panel('Estrutura acionista','Capital totalmente disperso em bolsa, sem acionista de controlo nem estrutura familiar.',
+      (()=>{
+        const rows=[['Vanguard Group',71.635,10.03],['BlackRock',51.974,7.30],['State Street',35.989,5.10]];
+        const t=el('table');
+        t.appendChild(el('thead',{},el('tr',{},el('th',{text:'Acionista com mais de 5% (31-12-2025)'}),el('th',{text:'Ações (M)'}),el('th',{text:'% capital'}))));
+        t.appendChild(el('tbody',{},
+          ...rows.map(r=>el('tr',{},el('td',{text:r[0]}),el('td',{class:'num',text:fmt(r[1],1)}),el('td',{class:'num',text:fmt(r[2],2)+'%'}))),
+          el('tr',{class:'sum'},el('td',{text:'Top 3 em conjunto'}),el('td',{class:'num',text:fmt(159.598,1)}),el('td',{class:'num',text:'22,4%'}))
+        ));
+        return el('div',{},el('div',{class:'tw'},t));
+      })()
+    )
+  ));
+
+  /* participação acionária da administração e dos executivos */
+  const partic=[
+    ['#Directors'],
+    ['Anthony Capuano',117,2417,2534],
+    ['Kareem Daniel',145,2300,2445],
+    ['Lloyd Dean',null,15591,15591],
+    ['Kathryn Engelbert',2079,4674,6753],
+    ['James Farley, Jr.',347,null,347],
+    ['Margaret Georgiadis',2130,10934,13064],
+    ['Michael Hsu',89,1774,1863],
+    ['Jennifer Taubert',null,3696,3696],
+    ['Paul Walsh',null,6228,6228],
+    ['Amy Weaver',null,2699,2699],
+    ['Miles White',5000,23286,28286],
+    ['#Named Executive Officers'],
+    ['Christopher Kempczinski',864054,4980,869034],
+    ['Ian Borden',310353,null,310353],
+    ['Gillian McDonald',59802,null,59802],
+    ['Joseph Erlinger',269850,null,269850],
+    ['Manuel J.M. Steijaert',31079,null,31079]
+  ];
+  const pt2=el('table');
+  pt2.appendChild(el('thead',{},el('tr',{},el('th',{text:'Nome'}),el('th',{text:'Ações ordinárias'}),el('th',{text:'Equivalentes de ações'}),el('th',{text:'Total'}))));
+  const ptb2=el('tbody');
+  partic.forEach(r=>{
+    if(r[0].startsWith('#')){
+      ptb2.appendChild(el('tr',{class:'head-row'},el('td',{colspan:4,text:r[0].slice(1)})));return;
+    }
+    ptb2.appendChild(el('tr',{},el('td',{text:r[0]}),
+      ...r.slice(1).map(v=>el('td',{class:'num',text:v==null?'—':fmt(v,0)}))));
+  });
+  ptb2.appendChild(el('tr',{class:'sum'},el('td',{text:'Todos os diretores e executivos em grupo (23 pessoas)'}),
+    el('td',{class:'num',text:fmt(1756901,0)}),el('td',{class:'num',text:fmt(81831,0)}),el('td',{class:'num',text:fmt(1838732,0)})));
+  pt2.appendChild(ptb2);
+  f.appendChild(panel('Órgãos de gestão com ações',null,
+    el('div',{class:'tw'},pt2)
+  ));
+
+  const guid=[['Margem operacional','Faixa média-alta dos 40% (46,1% em 2025; 46,9% ajustada)'],
+    ['SG&A','Cerca de 2,2% das vendas do sistema'],
+    ['Capex','3,7 a 3,9 mil M$ em 2026; mais 300 a 500 M$ em 2027'],
+    ['Taxa de imposto efetiva','21% a 23%'],
+    ['Conversão de free cash flow','80% a 85%'],
+    ['Despesa de juros','+4% a +6%'],
+    ['Expansão da rede','50.000 restaurantes até ao final de 2027; ~2.600 aberturas brutas e ~2.100 líquidas em 2026'],
+    ['Fidelização','250 M de utilizadores ativos e 45 mil M$ de vendas do sistema associadas ao programa'],
+    ['Entrega','30% das vendas de delivery iniciadas na aplicação própria até ao final de 2027']];
+  const gt=el('table');
+  gt.appendChild(el('tbody',{},...guid.map(g=>el('tr',{},el('td',{text:g[0]}),el('td',{style:'text-align:right;color:#3E464A',text:g[1]})))));
+  f.appendChild(panel('Guidance da gestão para 2026-2027','Comunicado pelo CFO Ian Borden.',
+    el('div',{class:'tw'},gt)
+  ));
+  return f;
+});
+
+function person(ini,nome,cargo,desc){
+  return el('div',{class:'person'},
+    el('div',{class:'ini',text:ini}),
+    el('div',{},el('b',{text:nome}),el('span',{text:cargo}),el('p',{text:desc}))
+  );
+}
+
+/* ---------- 2. RISCOS, VANTAGENS E FRAQUEZAS ---------- */
+V('riscos','Riscos e SWOT','Vantagens competitivas, fraquezas e riscos',
+  '',
+  ()=>{
+  const f=document.createDocumentFragment();
+
+  const vant=[
+    ['Escala','Empresa com grande poder negocial, o que se traduz em condições de compra na cadeia de fornecimento e em diluição dos custos de marketing e de tecnologia que nenhum concorrente consegue igualar.'],
+    ['Grandes margens','Em 2025 a margem EBITDA foi de 54,3% e a margem EBIT de 46,1%, ambas o valor mais alto do período em análise.'],
+    ['Imobiliário','Sete décadas de aquisição e gestão de terrenos e edifícios sob os restaurantes. É a vantagem mais difícil de replicar por qualquer novo operador.'],
+    ['Marca e reconhecimento global','A marca de restauração mais reconhecida do mundo, o que sustenta poder de fixação de preços e capacidade de atrair novos franquiados.'],
+    ['Retorno sobre o capital','ROIC de 27,4% em 2025 contra um WACC de 6,82%, um spread de cerca de 20 pontos percentuais que se mantém há mais de uma década.'],
+    ['Histórico de retorno ao acionista','Dividendo pago desde 1976 e aumentado em 49 anos consecutivos, o que coloca a empresa a um único aumento do estatuto de Dividend King. Dividendo anualizado de 7,44 $ por ação e 10,3 mil M$ de recompra ainda por executar no fecho de 2025.'],
+    ['Cadeia de fornecimento e formação','Sistema logístico global e Hamburger University, que padronizam a operação em mais de 100 países.']
+  ];
+  const fraq=[
+    ['Menor velocidade de execução','O modelo franquiado obriga a negociar cada mudança com milhares de operadores independentes, o que torna qualquer viragem estratégica mais lenta do que numa rede própria.'],
+    ['Dependência da saúde financeira dos franquiados','Qualquer deterioração generalizada da rentabilidade ao nível do franquiado limita o investimento em renovação e em novas unidades, com impacto de médio prazo nas royalties.'],
+    ['Exposição cambial','A empresa tem grande exposição cambial devido à sua grande presença a nível internacional.'],
+    ['Pressão de custos nas lojas próprias','A margem de lojas próprias tem vindo a ser pressionada pela inflação de alimentos e salários. É o único bloco de receita com estrutura de custos verdadeiramente exposta.'],
+    ['Rigidez imobiliária','Os arrendamentos comerciais têm duração média de 20 anos, o que limita a agilidade para realocar restaurantes perante alterações demográficas ou de tráfego.'],
+    ['Capital próprio negativo','Não representa risco de solvência no curto prazo, mas reduz a flexibilidade de balanço para absorver um período prolongado de deterioração de margens ou de fluxo de caixa.']
+  ];
+
+  f.appendChild(el('div',{class:'grid g2'},
+    panel('Vantagens competitivas','O que sustenta o spread ROIC-WACC.',
+      el('div',{},...vant.map(v=>el('div',{class:'risk'},
+        el('div',{class:'risk-h'},el('b',{text:v[0]}),el('span',{class:'tag ok',text:'força'})),
+        el('p',{text:v[1]})))) ),
+    panel('Fraquezas e desafios estruturais','O que limita a criação de valor futura.',
+      el('div',{},...fraq.map(v=>el('div',{class:'risk'},
+        el('div',{class:'risk-h'},el('b',{text:v[0]}),el('span',{class:'tag warn',text:'fraqueza'})),
+        el('p',{text:v[1]})))) )
+  ));
+
+  const riscos=[
+    ['Abrandamento do crescimento nos EUA','Específico','bad','Houve uma diminuição do crescimento das vendas nos EUA, um dos principais mercados da empresa.'],
+    ['Saúde financeira dos franquiados','Específico','bad','A guerra de valor comprime a margem ao nível do restaurante. Franquiados menos rentáveis investem menos em renovação e abrem menos unidades, o que afeta as royalties com dois a três anos de desfasamento.'],
+    ['Litigância e reputação','Específico','warn','Ação judicial de mais de 40 franquiados negros por alegada discriminação; episódio de E. coli em 2024 e boicote em 2025. O dano reputacional numa marca desta dimensão é imediato e caro.'],
+    ['Concentração de liderança','Governance','warn','A acumulação dos cargos de Chairman e CEO na mesma pessoa reduz a independência da supervisão do conselho de administração.'],
+    ['Guerra de valor no setor QSR','Setor','bad','O setor QSR (quick service restaurant, ou restauração de serviço rápido) é o segmento da restauração caracterizado por menus padronizados, preço baixo, tempo de espera curto e forte peso do take-away e do drive thru, é onde a McDonald\u2019s compete com a Burger King, a KFC, a Wendy\u2019s ou a Domino\u2019s. A concorrência em plataformas de valor pressiona simultaneamente volumes e margens. Uma eventual disciplina de preços em 2027 seria o principal catalisador positivo.'],
+    ['Escrutínio regulatório sobre alimentos ultraprocessados','Setor','warn','Pressão crescente sobre publicidade dirigida a menores, rotulagem nutricional e composição de produto em várias jurisdições.'],
+    ['GLP-1 / Ozempic','Emergente','warn','A gestão mapeou explicitamente a difusão de tratamentos de supressão de apetite como tendência de saúde pública com potencial para reduzir a frequência de visita e o volume global do setor.'],
+    ['Inteligência artificial e cibersegurança','Emergente','warn','A adoção da plataforma Edge em parceria com a Google e de canais de voz digitais expõe o grupo a roubo de dados, ciberataques operacionais e conformidade apertada, designadamente com o Regulamento de IA da União Europeia.'],
+    ['Segurança alimentar','Emergente','bad','Risco omnipresente de contaminação em qualquer ponto de uma cadeia global de fornecedores, com potencial de dano reputacional imediato e de escala de milhares de milhões.'],
+    ['Estrutura financeira','Financeiro','warn','A dívida de longo prazo continua a crescer, mas a cobertura de juros encontra-se estável.'],
+    ['Exposição cambial','Financeiro','warn','Empresa com grande exposição ao risco cambial devido à sua internacionalização. Com 68% do resultado operacional gerado fora dos Estados Unidos, uma valorização do dólar reduz mecanicamente o resultado reportado sem qualquer deterioração operacional do negócio.'],
+    ['Sensibilidade do consumidor de baixo rendimento','Macro','bad','O núcleo de clientes é o segmento mais afetado por perda de poder de compra. É este canal que transmite a conjuntura macro diretamente ao tráfego.'],
+    ['Taxas de juro elevadas','Macro','warn','Encarecem o refinanciamento da dívida a vencer e pressionam o custo do capital, além de limitarem a capacidade de investimento dos franquiados.'],
+    ['Geopolítica','Macro','warn','A saída da Rússia em 2022 é o precedente do custo de uma retirada forçada de mercado. Novas fraturas geopolíticas implicam risco equivalente.']
+  ];
+  const catCols={'Específico':PAL[0],'Setor':PAL[1],'Governance':PAL[4],'Emergente':PAL[2],'Financeiro':PAL[3],'Macro':'#6E767B'};
+  const cats=['Todos',...Object.keys(catCols)];
+  const box=el('div');
+  const bar=el('div',{class:'toolbar'});
+  let ativo='Todos';
+  function paint(){
+    box.innerHTML='';
+    riscos.filter(r=>ativo==='Todos'||r[1]===ativo).forEach(r=>{
+      box.appendChild(el('div',{class:'risk'},
+        el('div',{class:'risk-h'},
+          el('b',{html:`${r[0]} <span style="font-weight:400;color:${catCols[r[1]]};font-size:12px">· ${r[1]}</span>`}),
+          el('span',{class:'tag '+r[2],text:r[2]==='bad'?'risco elevado':'risco moderado'})),
+        el('p',{text:r[3]})));
+    });
+  }
+  cats.forEach(c=>{
+    const b=el('button',{class:'chip','aria-pressed':String(c==='Todos'),text:c});
+    b.addEventListener('click',()=>{ativo=c;[...bar.children].forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');paint();});
+    bar.appendChild(b);
+  });
+  paint();
+  f.appendChild(panel('Mapa de riscos','Catorze riscos identificados, agrupados por origem. Filtre por categoria.',bar,box));
+  return f;
+});
+</script>
+
+
+<script>
+/* ---------- 3. DEMONSTRAÇÕES FINANCEIRAS, PROJEÇÕES E INDICADORES ---------- */
+V('financeiro','Demonstrações e indicadores','Demonstrações financeiras, projeções e indicadores',
+  'Contas históricas de 2020 a 2025, projeções de 2026 a 2030 do modelo e o quadro completo de rácios, cada um com explicação.',
+  ()=>{
+  const f=document.createDocumentFragment();
+
+  f.appendChild(panel('Demonstração de resultados e projeção','Valores em milhões de dólares. As colunas com fundo dourado são projeções do modelo.',
+    tableRows(M.dr,M.anos.map(String),M.anosProj.map(String)),
+    el('p',{class:'hint',text:'Premissas da projeção: crescimento das vendas de +4,0% em 2026 e +6,96% ao ano entre 2027 e 2030 (o CAGR histórico do período 2020-2025); margem EBIT de 43,25%; taxa de imposto efetiva de 20,47%; capex de 3.700 M$ em 2026, 4.000 M$ em 2027 e 9,66% das vendas a partir de 2028; necessidades de fundo de maneio a 2,19% do volume de negócios.'})
+  ));
+
+  const g=chartBars({labels:[...M.anos,...M.anosProj].map(String),
+    series:[{name:'Receitas',data:[...M.dr[0][1],...M.dr[0][2]],color:'#C9CFCC'}],
+    lines:[{name:'Resultado operacional',data:[...M.dr[10][1],...M.dr[10][2]],color:PAL[0]},
+           {name:'Resultado líquido',data:[...M.dr[15][1],...M.dr[15][2]],color:PAL[1]}],
+    unit:'M$',dec:0,h:300});
+  f.appendChild(panel('Receitas, resultado operacional e resultado líquido','Histórico e projeção, em milhões de dólares.',g,
+    legend([{name:'Receitas',color:'#C9CFCC'},{name:'Resultado operacional',color:PAL[0]},{name:'Resultado líquido',color:PAL[1]}])));
+
+  f.appendChild(el('div',{class:'grid g2'},
+    panel('Balanço','Milhões de dólares.',tableRows(M.bal,M.anos.map(String))),
+    panel('Demonstração de fluxos de caixa','Milhões de dólares.',tableRows(M.cf,M.anos.map(String)))
+  ));
+
+  const gm=chartLines({labels:M.indAnos.map(String),asPct:true,
+    series:[{name:'Margem EBITDA',data:M.indicadores.find(i=>i.n==='Margem EBITDA').v,color:PAL[0]},
+            {name:'Margem EBIT',data:M.indicadores.find(i=>i.n==='Margem EBIT (operacional)').v,color:PAL[1]},
+            {name:'Margem líquida',data:M.indicadores.find(i=>i.n==='Margem líquida').v,color:PAL[2]},
+            {name:'ROIC',data:M.indicadores.find(i=>i.n==='ROIC, retorno sobre o capital investido').v,color:PAL[3]}],h:290});
+  f.appendChild(panel('Margens e retorno sobre o capital, 2021-2025','A estabilidade das margens é o traço mais relevante: variam pouco mais de 3 pontos percentuais em cinco anos.',
+    gm, legend([{name:'Margem EBITDA',color:PAL[0]},{name:'Margem EBIT',color:PAL[1]},{name:'Margem líquida',color:PAL[2]},{name:'ROIC',color:PAL[3]}])));
+
+  /* --- quadro de indicadores com explicações --- */
+  const t=el('table');
+  const th=el('tr'); th.appendChild(el('th',{text:'Indicador'}));
+  M.indAnos.forEach(a=>th.appendChild(el('th',{text:String(a)})));
+  th.appendChild(el('th',{text:''}));
+  t.appendChild(el('thead',{},th));
+  const tb=el('tbody');
+  M.indicadores.forEach(ind=>{
+    if(ind.g){
+      const r=el('tr',{class:'head-row'});
+      r.appendChild(el('td',{colspan:M.indAnos.length+2,text:ind.g}));
+      tb.appendChild(r); return;
+    }
+    const r=el('tr');
+    const nameCell=el('td');
+    const btn=el('button',{class:'chip',style:'border:0;background:none;padding:0;font-size:13.5px;color:inherit;text-align:left','aria-expanded':'false',html:`${ind.n} <span class="q" style="display:inline-grid;place-items:center;width:16px;height:16px;border:1px solid var(--rule);border-radius:50%;font-size:10px;color:var(--muted);vertical-align:1px">?</span>`});
+    nameCell.appendChild(btn); r.appendChild(nameCell);
+    ind.v.forEach(v=>{
+      const dec = ind.pct?1:(Math.abs(v)>=100?1:(Math.abs(v)>=10?2:(ind.n.includes('dias')?1:4)));
+      r.appendChild(el('td',{class:'num '+(v<0?'neg':''),text: ind.pct?pct(v,1):fmt(v, Math.abs(v)>=100?1:2)}));
+    });
+    r.appendChild(el('td',{}));
+    tb.appendChild(r);
+    const dr=el('tr',{hidden:'hidden',style:'background:var(--panel-2)'});
+    const dc=el('td',{colspan:M.indAnos.length+2,style:'text-align:left;padding:12px 0 16px'});
+    dc.appendChild(el('div',{style:'max-width:86ch;color:var(--ink-2);font-size:13.5px',text:ind.d}));
+    dc.appendChild(el('div',{style:'margin-top:6px;font-size:12.5px;color:var(--muted)',html:'Cálculo: '+ind.f}));
+    dr.appendChild(dc); tb.appendChild(dr);
+    btn.addEventListener('click',()=>{
+      const open=dr.hasAttribute('hidden');
+      if(open){dr.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}
+      else{dr.setAttribute('hidden','hidden');btn.setAttribute('aria-expanded','false');}
+    });
+  });
+  t.appendChild(tb);
+  const expandAll=el('button',{class:'chip',text:'Abrir todas as explicações'});
+  let allOpen=false;
+  expandAll.addEventListener('click',()=>{
+    allOpen=!allOpen;
+    tb.querySelectorAll('tr[hidden],tr[style*="panel-2"]').forEach(()=>{});
+    [...tb.children].forEach(tr=>{ if(tr.querySelector('td[colspan]') && !tr.classList.contains('head-row')){
+      if(allOpen) tr.removeAttribute('hidden'); else tr.setAttribute('hidden','hidden');}});
+    tb.querySelectorAll('button[aria-expanded]').forEach(b=>b.setAttribute('aria-expanded',String(allOpen)));
+    expandAll.textContent=allOpen?'Fechar todas as explicações':'Abrir todas as explicações';
+  });
+  f.appendChild(panel('Indicadores, 2021-2025','Clique no nome de qualquer indicador para ler o que mede, para que serve e como se calcula.',
+    el('div',{class:'toolbar'},expandAll),el('div',{class:'tw'},t)));
+  return f;
+});
+
+/* ---------- 4. Z-SCORE E F-SCORE ---------- */
+V('scores','Z-Score e F-Score','Z-Score de Altman e F-Score de Piotroski',
+  'Dois testes rápidos e independentes: o primeiro mede risco de falência, o segundo mede a qualidade fundamental do ano.',
+  ()=>{
+  const f=document.createDocumentFragment();
+  f.appendChild(kpis([
+    ['Z-Score 2025','4,95','Zona segura'],
+    ['Média do setor','1,70','Z-Score'],
+    ['F-Score 2025','6 / 9','Médio'],
+    ['Normal do setor','5','F-Score'],
+    ['Anos em zona segura','6 de 6','2020-2025'],
+    ['Melhor F-Score do período','8','2021']
+  ]));
+
+  /* Z-SCORE */
+  const zChart=chartLines({labels:M.z.anos.map(String),dec:2,
+    series:[{name:'Z-Score',data:M.z.score,color:PAL[0]}],
+    bands:[{from:2.99,to:6.0,color:'#E3F0EA',label:'Zona segura (Z > 2,99)'},
+           {from:1.81,to:2.99,color:'#FAF0DA',label:'Zona cinzenta'},
+           {from:0,to:1.81,color:'#F6E6E4',label:'Zona de perigo (Z ≤ 1,81)'}],h:300});
+
+  const zc=el('table');
+  const zh=el('tr'); zh.appendChild(el('th',{text:'Componente'})); zh.appendChild(el('th',{text:'Peso'}));
+  M.z.anos.forEach(a=>zh.appendChild(el('th',{text:String(a)})));
+  zc.appendChild(el('thead',{},zh));
+  const ztb=el('tbody');
+  const pesos={'A = Fundo de maneio / Ativo':1.2,'B = Resultados retidos / Ativo':1.4,'C = EBIT / Ativo':3.3,'D = Valor de mercado do CP / Passivo':0.6,'E = Vendas / Ativo':1.0};
+  Object.entries(M.z.comp).forEach(([k,v])=>{
+    const r=el('tr'); r.appendChild(el('td',{text:k})); r.appendChild(el('td',{class:'num',text:fmt(pesos[k],1)}));
+    v.forEach(x=>r.appendChild(el('td',{class:'num '+(x<0?'neg':''),text:fmt(x,4)})));
+    ztb.appendChild(r);
+  });
+  const zr=el('tr',{class:'sum'}); zr.appendChild(el('td',{text:'Z-Score'})); zr.appendChild(el('td',{text:''}));
+  M.z.score.forEach(s=>zr.appendChild(el('td',{class:'num pos',text:fmt(s,2)}))); ztb.appendChild(zr);
+  const zk=el('tr'); zk.appendChild(el('td',{text:'Classificação'})); zk.appendChild(el('td',{text:''}));
+  M.z.anos.forEach(()=>zk.appendChild(el('td',{style:'text-align:right'},el('span',{class:'tag ok',text:'Segura'})))); ztb.appendChild(zk);
+  zc.appendChild(ztb);
+
+  f.appendChild(panel('Z-Score de Altman','O que é e para que serve.',
+    el('div',{class:'prose wide'},
+      el('p',{text:'O Z-Score de Altman é um modelo estatístico publicado em 1968 que combina cinco rácios de balanço e de mercado numa única pontuação destinada a estimar a probabilidade de falência de uma empresa nos dois anos seguintes. Serve para responder, com um único número, a uma pergunta simples: esta empresa corre risco de insolvência?'}),
+      el('p',{text:'A fórmula é Z = 1,2A + 1,4B + 3,3C + 0,6D + 1,0E, em que A é o fundo de maneio sobre o ativo, B os resultados retidos sobre o ativo, C o EBIT sobre o ativo, D o valor de mercado do capital próprio sobre o passivo total e E as vendas sobre o ativo. Os limiares são: acima de 2,99, zona segura; entre 1,81 e 2,99, zona cinzenta; igual ou inferior a 1,81, zona de perigo.'}),
+      el('p',{text:'Nota metodológica importante: a componente D usa o valor de mercado do capital próprio, e não o valor contabilístico. É precisamente isso que torna o indicador utilizável na McDonald\u2019s, cujo capital próprio contabilístico é negativo por efeito das recompras acumuladas. Neste modelo, D foi calculado com a cotação de fecho real de cada ano multiplicada pelo número de ações desse ano.'})
+    ), zChart, el('div',{class:'tw',style:'margin-top:18px'},zc)
+  ));
+
+  f.appendChild(el('div',{class:'note'},el('p',{text:'Conclusão do Z-Score. A McDonald\u2019s pontua entre 3,87 e 5,02 em todos os anos do período, sempre confortavelmente acima do limiar de 2,99 e cerca de três vezes acima da média do setor, de 1,70. O risco de falência é, para efeitos práticos, nulo. O resultado é sustentado sobretudo por duas componentes: B, os resultados retidos acumulados, que valem 1,18x o ativo total, e D, a capitalização bolsista de 219 mil M$ contra 61 mil M$ de passivo. O ponto a reter é que o capital próprio contabilístico negativo, que faria disparar qualquer alarme numa leitura ingénua do balanço, não corresponde a fragilidade económica, corresponde a uma opção de política financeira.'})));
+
+  /* F-SCORE */
+  const fChart=chartBars({labels:M.f.anos.map(String),
+    series:[{name:'F-Score',data:M.f.score,color:PAL[1]}],
+    lines:[{name:'Normal do setor',data:M.f.anos.map(()=>5),color:PAL[2],dash:'4 3'}],
+    unit:'pontos',dec:0,h:250});
+
+  const ft=el('table');
+  const fh=el('tr'); fh.appendChild(el('th',{text:'Critério'}));
+  M.f.anos.forEach(a=>fh.appendChild(el('th',{text:String(a)})));
+  ft.appendChild(el('thead',{},fh));
+  const ftb=el('tbody');
+  M.f.criterios.forEach(c=>{
+    const r=el('tr'); r.appendChild(el('td',{text:c[0]}));
+    c[1].forEach(v=>r.appendChild(el('td',{style:'text-align:center;font-weight:600;color:'+(v?'var(--green)':'var(--signal)'),text:v?'✓':'✗'})));
+    ftb.appendChild(r);
+  });
+  const fr=el('tr',{class:'sum'}); fr.appendChild(el('td',{text:'F-Score (0 a 9)'}));
+  M.f.score.forEach(s=>fr.appendChild(el('td',{style:'text-align:center',text:String(s)}))); ftb.appendChild(fr);
+  const fk=el('tr'); fk.appendChild(el('td',{text:'Classificação'}));
+  M.f.classe.forEach(c=>fk.appendChild(el('td',{style:'text-align:center'},el('span',{class:'tag '+(c==='Forte'?'ok':c==='Médio'?'warn':'bad'),text:c})))); ftb.appendChild(fk);
+  ft.appendChild(ftb);
+
+  f.appendChild(panel('F-Score de Piotroski','O que é e para que serve.',
+    el('div',{class:'prose wide'},
+      el('p',{text:'O F-Score, proposto por Joseph Piotroski em 2000, avalia a solidez fundamental de uma empresa num determinado ano através de nove testes binários, cada um vale 1 ponto se for cumprido e 0 se não for. Ao contrário do Z-Score, não mede risco de falência: mede se as contas do ano melhoraram ou pioraram em relação ao ano anterior, em três dimensões, rentabilidade, estrutura financeira e eficiência operacional.'}),
+      el('p',{text:'A leitura é a seguinte: 8 ou 9 pontos indicam uma empresa fundamentalmente forte; entre 5 e 7 pontos, uma situação média; 4 ou menos, uma situação fraca. Porque quatro dos nove critérios são comparações com o ano anterior, a pontuação só pode ser calculada a partir de 2021.'}),
+      el('p',{text:'Adaptação usada neste modelo: foi utilizada a margem operacional (EBIT sobre vendas) em vez da margem bruta no critério 8, por a estrutura de custos do setor de restauração tornar a margem bruta pouco informativa, a maior parte das receitas são rendas e royalties, sem custo direto associado.'})
+    ), fChart, el('div',{class:'tw',style:'margin-top:18px'},ft)
+  ));
+
+  f.appendChild(el('div',{class:'note'},
+    el('p',{text:'Conclusão do F-Score. A pontuação de 2025 é de 6 em 9, acima da normalidade do setor (5 pontos) mas abaixo dos 8 pontos de 2021. Os seis critérios cumpridos são os que importam para a qualidade do negócio: rentabilidade positiva, cash flow operacional positivo, cash flow acima do resultado líquido, sinal de boa qualidade dos resultados, redução da alavancagem, ausência de emissão de novas ações e melhoria da margem operacional, que atingiu em 2025 o valor mais alto do período (46,1%).'}),
+    el('p',{text:'Os três critérios falhados dizem todos a mesma coisa: o ROA baixou de 15,1% para 14,4%, a liquidez corrente deteriorou-se de 1,19 para 0,95 e a rotação do ativo caiu de 0,47 para 0,45. Sinais de grande investimento, capex a 12,5% das vendas para o plano de expansão até 50.000 restaurantes, o ativo cresceu 7,9% mas a receita apenas 3,7%.'}),
+    el('p',{text:'Lidos em conjunto, os dois indicadores dizem coisas compatíveis: não há qualquer risco de solvência (Z-Score) e a qualidade fundamental de 2025 é sólida, ainda que não excecional (F-Score). Nenhum dos dois é um sinal de compra ou de venda; são filtros de despiste que confirmam que a discussão relevante nesta empresa é de avaliação, não de sobrevivência.'})));
+
+  /* métricas intermédias do F-Score */
+  const mt=el('table');
+  const mh=el('tr'); mh.appendChild(el('th',{text:'Métrica intermédia'}));
+  M.f.anos.forEach(a=>mh.appendChild(el('th',{text:String(a)})));
+  mt.appendChild(el('thead',{},mh));
+  mt.appendChild(el('tbody',{},...Object.entries(M.f.metricas).map(([k,v])=>
+    el('tr',{},el('td',{text:k}),...v.map(x=>el('td',{class:'num',text:/Liquidez/.test(k)?fmt(x,2):pct(x,2)}))))));
+  f.appendChild(panel('Métricas que sustentam os critérios',null,el('div',{class:'tw'},mt)));
+  return f;
+});
+</script>
+
+
+<script>
+/* simulador interativo do DCF: recalcula o valor por ação em função do WACC e do g */
+function dcfSimulador(d){
+  const FCF=[7410.62,8554.25,10274.72,10861.88,11527.22];
+  const NOPAT30=12616.35, ROICref=0.2872, DL=d.dividaLiq, ACT=d.acoes;
+  const bruto=(w,g)=>{
+    let s=0; FCF.forEach((f,i)=>s+=f/Math.pow(1+w,i+1));
+    const vr=NOPAT30*(1+g)*(1-g/ROICref)/(w-g);
+    return s+vr/Math.pow(1+w,5);
+  };
+  const AJUSTE=d.ev-bruto(d.wacc,d.g);
+  const porAcao=(w,g)=>((bruto(w,g)+AJUSTE)-DL)/ACT;
+
+  const big=el('span',{class:'big num'});
+  const delta=el('span',{class:'delta num'});
+  const marca=el('span',{class:'tag'});
+  const detalhe=el('p',{class:'hint',style:'margin-top:10px'});
+
+  const mk=(rotulo,min,max,step,valor,fmtv)=>{
+    const saida=el('output',{style:'font-weight:600;font-size:15px'});
+    const input=el('input',{type:'range',min:String(min),max:String(max),step:String(step),value:String(valor),
+      'aria-label':rotulo,style:'width:100%'});
+    const bloco=el('div',{},
+      el('div',{style:'display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px'},
+        el('span',{style:'font-size:12.5px;color:var(--muted)',text:rotulo}), saida),
+      input,
+      el('div',{style:'display:flex;justify-content:space-between;font-size:11px;color:var(--muted)'},
+        el('span',{text:fmtv(min)}), el('span',{text:fmtv(max)})));
+    return {bloco,input,saida,fmtv};
+  };
+  const sw=mk('Custo médio ponderado do capital (WACC)',0.040,0.100,0.0005,d.wacc,v=>pct(v,2));
+  const sg=mk('Taxa de crescimento perpétuo (g)',0.000,0.040,0.0005,d.g,v=>pct(v,2));
+
+  const grid=el('table',{class:'sens'});
+  const celulas=[];
+  (()=>{
+    const hr=el('tr'); hr.appendChild(el('th',{html:'WACC <span style="color:#B9BFBC">╲</span> g'}));
+    d.sensG.forEach(c=>hr.appendChild(el('th',{text:pct(c,2)})));
+    grid.appendChild(el('thead',{},hr));
+    const tb=el('tbody');
+    d.sensWacc.forEach((r,i)=>{
+      const tr=el('tr'); tr.appendChild(el('th',{style:'text-align:left',text:pct(r,2)}));
+      d.sensG.forEach((c,j)=>{
+        const td=el('td',{text:fmt(d.sensGrid[i][j],2),tabindex:'0',role:'button',
+          'aria-label':`WACC ${pct(r,2)}, g ${pct(c,2)}: ${fmt(d.sensGrid[i][j],2)} dólares`});
+        const pick=()=>{sw.input.value=String(r);sg.input.value=String(c);atualizar();};
+        td.addEventListener('click',pick);
+        td.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});
+        celulas.push({td,r,c}); tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+    grid.appendChild(tb);
+  })();
+
+  function atualizar(){
+    let w=parseFloat(sw.input.value), g=parseFloat(sg.input.value);
+    if(g>w-0.005){ g=Math.round((w-0.005)*2000)/2000; sg.input.value=String(g); }
+    sw.saida.textContent=pct(w,2); sg.saida.textContent=pct(g,2);
+    const v=porAcao(w,g), dif=v/M.precoRef-1;
+    big.textContent=fmt(v,2)+' $';
+    delta.textContent=sig(dif)+' face à cotação';
+    delta.className='delta num '+cls(dif);
+    marca.textContent = dif<-0.15?'Sobreavaliada':dif>0.15?'Subavaliada':'Perto do justo valor';
+    marca.className='tag '+(dif<-0.15?'bad':dif>0.15?'ok':'warn');
+    detalhe.textContent=`Diferencial WACC menos g de ${pct(w-g,2)}. Cotação de referência: ${fmt(M.precoRef,2)} $. `
+      + (Math.abs(w-d.wacc)<1e-9 && Math.abs(g-d.g)<1e-9 ? 'Está no cenário base do modelo.' : 'Cenário alterado face ao modelo (WACC 6,82% e g 2,00%).');
+    celulas.forEach(o=>o.td.classList.toggle('sel', Math.abs(o.r-w)<1e-9 && Math.abs(o.c-g)<1e-9));
+  }
+  sw.input.addEventListener('input',atualizar);
+  sg.input.addEventListener('input',atualizar);
+  atualizar();
+
+  return el('div',{},
+    el('div',{class:'readout'},big,delta,marca),
+    detalhe,
+    el('div',{class:'grid g2',style:'margin:18px 0 22px'},sw.bloco,sg.bloco),
+    el('div',{class:'tw'},grid),
+    el('p',{class:'hint',text:'Arraste os cursores para ver o efeito no valor por ação, ou clique numa célula do quadro para saltar para esse cenário. O quadro mostra os valores calculados no modelo.'}));
+}
+
+/* ---------- 5. DCF ---------- */
+V('dcf','DCF','Fluxos de caixa descontados (FCFF)',
+  '',
+  ()=>{
+  const f=document.createDocumentFragment(), d=M.dcf, w=M.wacc;
+  f.appendChild(kpis([
+    ['Valor por ação','249,83 $','DCF'],
+    ['Cotação de referência','253,10 $',''],
+    ['Diferença','−1,3%','praticamente ao justo valor'],
+    ['WACC','6,82%',''],
+    ['Crescimento perpétuo','2,00%',''],
+    ['Peso do valor residual','81,9%','do enterprise value']
+  ]));
+
+  f.appendChild(panel('O que é e para que serve',null,el('div',{class:'prose wide'},
+    el('p',{text:'O modelo de fluxos de caixa descontados parte do princípio de que uma empresa vale o dinheiro que conseguir libertar no futuro, trazido ao presente a uma taxa que reflete o risco desse dinheiro. Trabalha-se aqui com o free cash flow to firm, o fluxo disponível para todos os financiadores, credores e acionistas, projetado para cinco anos e prolongado depois por um valor residual em perpetuidade.'}),
+    el('p',{text:'A taxa de desconto é o WACC, o custo médio ponderado do capital, que mistura o que os acionistas exigem (custo do capital próprio) e o que os credores cobram (custo da dívida, líquido do efeito fiscal), na proporção de cada um na estrutura de financiamento. Do valor da empresa assim obtido subtrai-se a dívida líquida para chegar ao valor do capital próprio, que se divide pelo número de ações.'})
+  )));
+
+  const wt=bridge([
+    ['Taxa isenta de risco (Rf)',pct(w.rf,2)],
+    ['Prémio de risco de mercado (ERP)',pct(w.erp,2)],
+    ['Beta alavancado (regressão MCD vs. índice)',fmt(w.beta,4)],
+    ['__Custo do capital próprio (Ke = Rf + β × ERP)',pct(w.ke,2),true],
+    ['Custo da dívida antes de imposto (Kd)',pct(w.kd,2)],
+    ['Taxa de imposto',pct(w.imposto,2)],
+    ['__Custo da dívida após imposto',pct(w.kdliq,2),true],
+    ['Peso do capital próprio',pct(w.pesoCP,1)],
+    ['Peso da dívida',pct(w.pesoD,1)],
+    ['__WACC',pct(w.valor,2),true]
+  ]);
+  f.appendChild(el('div',{class:'grid g2'},
+    panel('Construção do custo do capital','Modelo CAPM. O beta foi estimado por regressão dos retornos diários da ação contra os do índice de mercado.',wt),
+    panel('Ponte do valor','Do enterprise value ao valor por ação.',bridge([
+      ['Soma dos valores atuais dos FCFF (2026-2030)',d.somaVaFcff,false,1],
+      ['Valor residual em 2030',d.valorResidual,false,1],
+      ['Valor atual do valor residual',d.vaValorResidual,false,1],
+      ['__Enterprise value',d.ev,true,1],
+      ['(−) Dívida financeira líquida',-d.dividaLiq,false,0],
+      ['(−) Interesses minoritários',-d.minoritarios,false,0],
+      ['__Valor do capital próprio',d.valorCP,true,1],
+      ['÷ Número de ações (M)',d.acoes,false,1],
+      ['__Valor por ação ($)',d.valorAcao,true,2]
+    ]))
+  ));
+
+  f.appendChild(panel('Construção do fluxo de caixa livre','Milhões de dólares.',
+    tableRows(d.linhas.map(r=>[r[0],null,r[1]]),[],M.anosProj.map(String))));
+
+  const gfc=chartBars({labels:M.anosProj.map(String),
+    series:[{name:'Free cash flow to firm',data:d.linhas[9][1],color:PAL[1]},
+            {name:'Valor atual do FCFF',data:d.linhas[11][1],color:PAL[0]}],
+    unit:'M$',dec:0,h:270});
+  f.appendChild(panel('Fluxo de caixa livre e o seu valor atual','O afastamento entre as duas barras é o custo do tempo: em 2030, cada dólar vale hoje 71,9 cêntimos.',
+    gfc,legend([{name:'Free cash flow to firm',color:PAL[1]},{name:'Valor atual do FCFF',color:PAL[0]}])));
+
+  f.appendChild(panel('Sensibilidade: WACC × crescimento perpétuo',null, dcfSimulador(d)));
+  return f;
+});
+
+/* simulador interativo do EVA */
+function evaSimulador(e){
+  const NOPAT=[9617.87,10286.92,11002.51,11767.88,12616.34];
+  const CAPINV=[40133.25,41135.35,41820.60,42681.10,43721.55];
+  const CAP3=44810.67, NOPAT30=12616.34, CAP2026=e.capital2026;
+  const DL=e.dividaLiq, ACT=M.acoes;
+  const bruto=(w,g)=>{
+    let s=0;
+    for(let i=0;i<5;i++) s+=(NOPAT[i]-w*CAPINV[i])/Math.pow(1+w,i+1);
+    const vr=(NOPAT30*(1+g)-w*CAP3)/(w-g);
+    return CAP2026+s+vr/Math.pow(1+w,5);
+  };
+  const AJUSTE=e.ev-bruto(e.vrWacc,e.vrG);
+  const porAcao=(w,g)=>((bruto(w,g)+AJUSTE)-DL)/ACT;
+
+  const big=el('span',{class:'big num'}), delta=el('span',{class:'delta num'}), marca=el('span',{class:'tag'});
+  const detalhe=el('p',{class:'hint',style:'margin-top:10px'});
+  const mk=(rotulo,min,max,step,valor,fmtv)=>{
+    const saida=el('output',{style:'font-weight:600;font-size:15px'});
+    const input=el('input',{type:'range',min:String(min),max:String(max),step:String(step),value:String(valor),'aria-label':rotulo,style:'width:100%'});
+    const bloco=el('div',{},
+      el('div',{style:'display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px'},
+        el('span',{style:'font-size:12.5px;color:var(--muted)',text:rotulo}),saida),
+      input,
+      el('div',{style:'display:flex;justify-content:space-between;font-size:11px;color:var(--muted)'},
+        el('span',{text:fmtv(min)}),el('span',{text:fmtv(max)})));
+    return {bloco,input,saida};
+  };
+  const sw=mk('Custo médio ponderado do capital (WACC)',0.040,0.100,0.0005,e.vrWacc,v=>pct(v,2));
+  const sg=mk('Taxa de crescimento perpétuo (g)',0.000,0.040,0.0005,e.vrG,v=>pct(v,2));
+
+  const linhas=e.sensWacc, colunas=e.sensG;
+  const grid=el('table',{class:'sens'}), celulas=[];
+  const hr=el('tr'); hr.appendChild(el('th',{html:'WACC <span style="color:#B9BFBC">╲</span> g'}));
+  colunas.forEach(c=>hr.appendChild(el('th',{text:pct(c,2)})));
+  grid.appendChild(el('thead',{},hr));
+  const tb=el('tbody');
+  linhas.forEach(r=>{
+    const tr=el('tr'); tr.appendChild(el('th',{style:'text-align:left',text:pct(r,2)}));
+    colunas.forEach(c=>{
+      const v=porAcao(r,c);
+      const td=el('td',{text:fmt(v,2),tabindex:'0',role:'button','aria-label':`WACC ${pct(r,2)}, g ${pct(c,2)}: ${fmt(v,2)} dólares`});
+      const pick=()=>{sw.input.value=String(r);sg.input.value=String(c);atualizar();};
+      td.addEventListener('click',pick);
+      td.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();pick();}});
+      celulas.push({td,r,c}); tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+  grid.appendChild(tb);
+
+  function atualizar(){
+    let w=parseFloat(sw.input.value), g=parseFloat(sg.input.value);
+    if(g>w-0.005){ g=Math.round((w-0.005)*2000)/2000; sg.input.value=String(g); }
+    sw.saida.textContent=pct(w,2); sg.saida.textContent=pct(g,2);
+    const v=porAcao(w,g), dif=v/M.precoRef-1;
+    big.textContent=fmt(v,2)+' $';
+    delta.textContent=sig(dif)+' face à cotação';
+    delta.className='delta num '+cls(dif);
+    marca.textContent=dif<-0.15?'Sobreavaliada':dif>0.15?'Subavaliada':'Perto do justo valor';
+    marca.className='tag '+(dif<-0.15?'bad':dif>0.15?'ok':'warn');
+    detalhe.textContent=`Diferencial WACC menos g de ${pct(w-g,2)}. Cotação de referência: ${fmt(M.precoRef,2)} $. `
+      + (Math.abs(w-e.vrWacc)<1e-9 && Math.abs(g-e.vrG)<1e-9 ? 'Está no cenário base do modelo.' : 'Cenário alterado face ao modelo (WACC 6,82% e g 2,00%).');
+    celulas.forEach(o=>o.td.classList.toggle('sel',Math.abs(o.r-w)<1e-9 && Math.abs(o.c-g)<1e-9));
+  }
+  sw.input.addEventListener('input',atualizar);
+  sg.input.addEventListener('input',atualizar);
+  atualizar();
+
+  return el('div',{},
+    el('div',{class:'readout'},big,delta,marca),
+    detalhe,
+    el('div',{class:'grid g2',style:'margin:18px 0 22px'},sw.bloco,sg.bloco),
+    el('div',{class:'tw'},grid),
+    el('p',{class:'hint',text:'Arraste os cursores para ver o efeito no valor por ação, ou clique numa célula do quadro para saltar para esse cenário. Os valores do quadro são recalculados com o WACC a ser aplicado em simultâneo ao diferencial ROIC menos WACC de cada ano, aos fatores de desconto e ao denominador do valor residual.'}));
+}
+
+/* ---------- 6. EVA ---------- */
+V('eva','EVA','Valor económico acrescentado (EVA)',
+  'Mede se a empresa gera valor.',
+  ()=>{
+  const f=document.createDocumentFragment(), e=M.eva;
+  f.appendChild(kpis([
+    ['Valor por ação','252,30 $','EVA'],
+    ['Diferença','−0,3%','praticamente ao justo valor'],
+    ['Market value added','179.811 M$',''],
+    ['ROIC 2026E','24,0%',''],
+    ['ROIC 2030E','28,9%',''],
+    ['Spread médio','~19 p.p.','ROIC − WACC']
+  ]));
+
+  f.appendChild(panel('O que é e para que serve',null,el('div',{class:'prose wide'},
+    el('p',{text:'O EVA mede o valor criado acima daquilo que o capital investido já deveria render. Calcula-se como (ROIC − WACC) × Capital investido: se uma empresa gera 27% sobre um capital que lhe custa 6,8%, cada ano de operação acrescenta valor; se gerasse menos do que o custo do capital, destruiria valor mesmo apresentando lucro contabilístico.'}),
+    el('p',{text:'A avaliação faz-se somando ao capital já investido o valor atual de todos os EVA futuros, a soma desses EVA descontados chama-se market value added, ou MVA, e é literalmente o prémio que o mercado deve pagar acima do valor contabilístico do capital afeto à operação.'}),
+    el('p',{text:'O EVA é, matematicamente, equivalente ao DCF quando as premissas são as mesmas. A sua utilidade é outra: mostra de onde vem o valor.'})
+  )));
+
+  f.appendChild(panel('Cálculo do EVA anual','Milhões de dólares, exceto onde indicada percentagem.',
+    tableRows(e.linhas.map(r=>[r[0],null,r[1], (r[2]==='pct'||/Fator/.test(r[0]))?'pct':null]),[],M.anosProj.map(String))));
+
+  f.appendChild(el('div',{class:'grid g2'},
+    panel('Valor residual do EVA','Perpetuidade a partir do EVA normalizado de 2030.',bridge([
+      ['EBIT de 2025 × (1 − t)',e.vrEbit,false,1],
+      ['Capital investido de referência',e.vrCapital,false,1],
+      ['ROIC de referência',pct(e.vrRoic,2)],
+      ['Custo do capital (WACC)',pct(e.vrWacc,2)],
+      ['__EVA normalizado',e.vrEva2030,true,1],
+      ['Crescimento perpétuo (g)',pct(e.vrG,2)],
+      ['__Valor residual = EVA ÷ (WACC − g)',e.valorResidual,true,1],
+      ['Valor atual do valor residual',e.vaValorResidual,false,1]
+    ])),
+    panel('Ponte do valor','Do capital investido ao valor por ação.',bridge([
+      ['Capital investido em 2026',e.capital2026,false,1],
+      ['(+) Market value added (soma dos EVA descontados)',e.mva,false,1],
+      ['__Enterprise value',e.ev,true,1],
+      ['(−) Dívida financeira líquida',-e.dividaLiq,false,0],
+      ['(−) Interesses minoritários',-e.minoritarios,false,0],
+      ['__Valor do capital próprio',e.valorCP,true,1],
+      ['÷ Número de ações (M)',M.acoes,false,1],
+      ['__Valor por ação ($)',e.valorAcao,true,2]
+    ]))
+  ));
+
+  f.appendChild(panel('EVA gerado em cada ano','Milhões de dólares. O crescimento resulta simultaneamente do aumento do capital investido e da expansão do spread ROIC menos WACC.',
+    chartBars({labels:M.anosProj.map(String),
+      series:[{name:'EVA',data:e.linhas[4][1],color:PAL[3]},{name:'Valor atual do EVA',data:e.linhas[6][1],color:PAL[1]}],
+      unit:'M$',dec:0,h:260}),
+    legend([{name:'EVA',color:PAL[3]},{name:'Valor atual do EVA',color:PAL[1]}]),
+    chartLines({labels:M.anosProj.map(String),asPct:true,
+      series:[{name:'ROIC',data:e.linhas[2][1],color:PAL[0]},{name:'WACC',data:e.linhas[3][1],color:PAL[2],dash:'4 3'}],h:220}),
+    legend([{name:'ROIC',color:PAL[0]},{name:'WACC',color:PAL[2]}])
+  ));
+
+  f.appendChild(panel('Sensibilidade: WACC × crescimento perpétuo',null, evaSimulador(e)));
+
+  f.appendChild(el('div',{class:'note'},el('p',{text:'Leitura. O EVA (252,30 $) e o DCF (249,83 $) convergem com uma diferença de apenas 1,0%, o que é uma boa verificação cruzada: os dois modelos partem das mesmas projeções e do mesmo custo do capital, e a coerência entre eles confirma que não há erro de construção. Ambos colocam a ação praticamente ao justo valor, a menos de 1,5% da cotação de referência.'})));
+
+  return f;
+});
+
+/* simulador interativo do Total Payout Model */
+function tpmSimulador(m){
+  const TP=m.linhas[4][1];
+  const bruto=(ke,g)=>{
+    let s=0; TP.forEach((v,i)=>s+=v/Math.pow(1+ke,i+1));
+    return s+TP[4]*(1+g)/(ke-g)/Math.pow(1+ke,5);
+  };
+  const AJUSTE=m.valorAcao-bruto(m.ke,m.g);
+  const porAcao=(ke,g)=>bruto(ke,g)+AJUSTE;
+
+  const big=el('span',{class:'big num'}), delta=el('span',{class:'delta num'}), marca=el('span',{class:'tag'});
+  const detalhe=el('p',{class:'hint',style:'margin-top:10px'});
+  const mk=(rotulo,min,max,step,valor,fmtv)=>{
+    const saida=el('output',{style:'font-weight:600;font-size:15px'});
+    const input=el('input',{type:'range',min:String(min),max:String(max),step:String(step),value:String(valor),'aria-label':rotulo,style:'width:100%'});
+    const bloco=el('div',{},
+      el('div',{style:'display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px'},
+        el('span',{style:'font-size:12.5px;color:var(--muted)',text:rotulo}),saida),
+      input,
+      el('div',{style:'display:flex;justify-content:space-between;font-size:11px;color:var(--muted)'},
+        el('span',{text:fmtv(min)}),el('span',{text:fmtv(max)})));
+    return {bloco,input,saida};
+  };
+  const sk=mk('Custo do capital próprio (Ke)',0.045,0.110,0.0005,m.ke,v=>pct(v,2));
+  const sg=mk('Taxa de crescimento perpétuo (g)',0.000,0.040,0.0005,m.g,v=>pct(v,2));
+
+  const grid=el('table',{class:'sens'}), celulas=[];
+  const hr=el('tr'); hr.appendChild(el('th',{html:'Ke <span style="color:#B9BFBC">╲</span> g'}));
+  m.sensG.forEach(c=>hr.appendChild(el('th',{text:pct(c,2)})));
+  grid.appendChild(el('thead',{},hr));
+  const tb=el('tbody');
+  m.sensKe.forEach((r,i)=>{
+    const tr=el('tr'); tr.appendChild(el('th',{style:'text-align:left',text:pct(r,2)}));
+    m.sensG.forEach((c,j)=>{
+      const td=el('td',{text:fmt(m.sensGrid[i][j],2),tabindex:'0',role:'button','aria-label':`Ke ${pct(r,2)}, g ${pct(c,2)}: ${fmt(m.sensGrid[i][j],2)} dólares`});
+      const pick=()=>{sk.input.value=String(r);sg.input.value=String(c);atualizar();};
+      td.addEventListener('click',pick);
+      td.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();pick();}});
+      celulas.push({td,r,c}); tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+  grid.appendChild(tb);
+
+  function atualizar(){
+    let ke=parseFloat(sk.input.value), g=parseFloat(sg.input.value);
+    if(g>ke-0.005){ g=Math.round((ke-0.005)*2000)/2000; sg.input.value=String(g); }
+    sk.saida.textContent=pct(ke,2); sg.saida.textContent=pct(g,2);
+    const v=porAcao(ke,g), dif=v/M.precoRef-1;
+    big.textContent=fmt(v,2)+' $';
+    delta.textContent=sig(dif)+' face à cotação';
+    delta.className='delta num '+cls(dif);
+    marca.textContent=dif<-0.15?'Sobreavaliada':dif>0.15?'Subavaliada':'Perto do justo valor';
+    marca.className='tag '+(dif<-0.15?'bad':dif>0.15?'ok':'warn');
+    detalhe.textContent=`Diferencial Ke menos g de ${pct(ke-g,2)}. Cotação de referência: ${fmt(M.precoRef,2)} $. `
+      + (Math.abs(ke-m.ke)<1e-9 && Math.abs(g-m.g)<1e-9 ? 'Está no cenário base do modelo.' : 'Cenário alterado face ao modelo (Ke 7,28% e g 2,00%).');
+    celulas.forEach(o=>o.td.classList.toggle('sel',Math.abs(o.r-ke)<1e-9 && Math.abs(o.c-g)<1e-9));
+  }
+  sk.input.addEventListener('input',atualizar);
+  sg.input.addEventListener('input',atualizar);
+  atualizar();
+
+  return el('div',{},
+    el('div',{class:'readout'},big,delta,marca),
+    detalhe,
+    el('div',{class:'grid g2',style:'margin:18px 0 22px'},sk.bloco,sg.bloco),
+    el('div',{class:'tw'},grid),
+    el('p',{class:'hint',text:'Arraste os cursores para ver o efeito no valor por ação, ou clique numa célula do quadro para saltar para esse cenário.'}));
+}
+
+/* ---------- 7. TOTAL PAYOUT MODEL ---------- */
+V('tpm','DDM Total Payout','DDM Total Payout Model','',
+  ()=>{
+  const f=document.createDocumentFragment(), m=M.tpm;
+  f.appendChild(kpis([
+    ['Valor por ação','212,40 $','DDM Total Payout'],
+    ['Diferença','−15,9%',''],
+    ['Ke','7,28%','custo do capital próprio'],
+    ['Payout médio','62,26%','2020-2025'],
+    ['Total payout 2026E','9,71 $','por ação'],
+    ['Total payout 2030E','12,35 $','+27% acumulado']
+  ]));
+
+  f.appendChild(panel('O que é e para que serve',null,el('div',{class:'prose wide'},
+    el('p',{text:'O DDM Total Payout Model é a versão completa do modelo de desconto de dividendos. Parte da mesma ideia, uma ação vale a soma de todo o dinheiro que chega ao acionista, mas corrige a omissão que torna o modelo de dividendos puro inadequado a esta empresa: além do dividendo, conta também a recompra de ações. Desconta-se ao custo do capital próprio (Ke), e não ao WACC, porque só se está a avaliar o fluxo dos acionistas.'}),
+    el('p',{text:'A recompra é convertida em dólares por ação: multiplica-se a redução anual do número de ações pelo preço de mercado assumido de 252,53 $, e divide-se pelo número de ações do ano. Somada ao dividendo projetado, obtém-se o total payout por ação, que é depois descontado e prolongado por um valor residual em perpetuidade.'}),
+    el('p',{text:'A diferença face ao modelo de dividendos puro é material e mede exatamente aquilo que este corrige. Em 2025 a McDonald\u2019s devolveu 5.115 M$ em dividendos e 2.056 M$ em recompras: ignorar a segunda via subavalia a ação em cerca de 41 $, ou 24%. O modelo só de dividendos dava 171,16 $; com as recompras incluídas, dá 212,40 $.'})
+  )));
+
+  f.appendChild(panel('Construção do total payout','O dividendo por ação e o resultado líquido projetado são os mesmos do modelo de dividendos; a recompra é a componente acrescentada.',
+    tableRows(m.linhas.map(r=>[r[0],null,r[1], /Fator/.test(r[0])?'pct':null]),[],M.anosProj.map(String))));
+
+  f.appendChild(el('div',{class:'grid g2'},
+    panel('Premissas',null,bridge([
+      ['Dividendo por ação de 2025 (base)',m.dps2025,false,2],
+      ['Payout médio histórico 2020-2025',pct(m.payout,2)],
+      ['Preço de mercado assumido para a recompra ($)',m.precoRecompra,false,2],
+      ['Taxa anual de redução de ações (recompras)',pct(m.buybackTaxa,2)],
+      ['Nº de ações em 2025 (M)',m.acoes2025,false,1],
+      ['Custo do capital próprio (Ke)',pct(m.ke,2)],
+      ['Crescimento perpétuo (g)',pct(m.g,2)]
+    ])),
+    panel('Ponte do valor',null,bridge([
+      ['Soma dos valores atuais do total payout 2026-2030',m.somaVp,false,2],
+      ['Total payout terminal (2031)',m.payoutTerminal,false,2],
+      ['Valor residual = TP₂₀₃₁ ÷ (Ke − g)',m.valorResidual,false,2],
+      ['Valor atual do valor residual',m.vpValorResidual,false,2],
+      ['__Valor por ação ($)',m.valorAcao,true,2]
+    ]))
+  ));
+
+  const gd=chartBars({labels:M.anosProj.map(String),
+    series:[{name:'Dividendo por ação',data:m.linhas[3][1],color:PAL[2]},
+            {name:'Recompra por ação',data:m.linhas[2][1],color:PAL[1]}],
+    stacked:true,unit:'$',dec:2,h:270,showValues:true,totals:true,valueFmt:v=>fmt(v,2)});
+  f.appendChild(panel('Decomposição do retorno ao acionista','Dólares por ação. A barra inferior é o dividendo, a superior a recompra; o total é o fluxo que o modelo desconta.',
+    gd, legend([{name:'Dividendo por ação',color:PAL[2]},{name:'Recompra por ação',color:PAL[1]}])));
+
+  f.appendChild(panel('Sensibilidade: Ke × crescimento perpétuo',null, tpmSimulador(m)));
+  return f;
+});
+
+/* ---------- 8. MÚLTIPLOS ---------- */
+V('multiplos','Múltiplos','Múltiplos de mercado e comparáveis',
+  'Avaliação relativa: quanto valeria a McDonald\u2019s se o mercado a avaliasse como avalia os seus pares diretos.',
+  ()=>{
+  const f=document.createDocumentFragment(), mm=M.mult;
+  f.appendChild(kpis([
+    ['Valor médio dos múltiplos','302,77 $','média dos quatro'],
+    ['Diferença','+19,9%',''],
+    ['P/E da MCD','26,08x','mediana dos pares 24,36x'],
+    ['EV/EBITDA da MCD','18,78x','mediana 18,12x'],
+    ['EV/Sales da MCD','10,30x','mediana 4,14x'],
+    ['P/S da MCD','8,35x','mediana 3,36x']
+  ]));
+
+  f.appendChild(panel('O que é e para que serve',null,el('div',{class:'prose wide'},
+    el('p',{text:'A avaliação por múltiplos é uma avaliação relativa, que através dos múltiplos compara a empresa com os do setor. Responde à pergunta «quanto pagaria o mercado por esta empresa se a tratasse como trata os seus pares?».'}),
+    el('p',{text:'Os múltiplos de enterprise value (EV/EBITDA e EV/Sales) avaliam a empresa toda e obrigam a subtrair a dívida líquida para chegar ao capital próprio. Os múltiplos de preço (P/E e P/S) já se referem diretamente ao capital próprio. Foi usada a mediana dos cinco pares, e não a média, para evitar que a Wingstop, que negoceia a 38,7x os lucros, distorça a referência.'})
+  )));
+
+  const pt=el('table');
+  const mx=v=>el('td',{class:'num',text:fmt(v,2)+'x'});
+  const vazio=()=>el('td',{style:'text-align:right;color:#B9BFBC',text:'—'});
+  pt.appendChild(el('thead',{},el('tr',{},el('th',{text:'Empresa'}),el('th',{text:'Ticker'}),el('th',{text:'P/E'}),el('th',{text:'EV/EBITDA'}),el('th',{text:'EV/Sales'}),el('th',{text:'P/S'}),el('th',{text:'EV/Sales ajustado'}),el('th',{text:'P/S ajustado'}))));
+  const ptb=el('tbody');
+  mm.pares.forEach(p=>ptb.appendChild(el('tr',{},el('td',{text:p[0]}),el('td',{style:'text-align:right;color:#6E767B',text:p[1]}),
+    ...p.slice(2,6).map(mx), vazio(), vazio())));
+  ptb.appendChild(el('tr',{class:'sum'},el('td',{text:'Mediana do setor'}),el('td',{text:''}),...mm.mediana.slice(0,4).map(mx), vazio(), vazio()));
+  ptb.appendChild(el('tr',{class:'sum'},el('td',{html:'<strong>McDonald\u2019s</strong>'}),el('td',{style:'text-align:right;color:#6E767B',text:'MCD'}),
+    ...mm.mcd.slice(0,4).map(mx), mx(mm.ajuste.evSalesAjustado), mx(mm.ajuste.psAjustado)));
+  pt.appendChild(ptb);
+  f.appendChild(panel('Empresas comparáveis','Cinco operadores de restauração rápida predominantemente franquiados. Fonte de mercado: Yahoo Finance.',el('div',{class:'tw'},pt),
+    el('div',{class:'note',style:'margin:16px 0 0'},el('p',{text:'Porque foram ajustados. A McDonald\u2019s negoceia a 10,30x as vendas e 8,35x as vendas em termos de preço, muito acima dos 4,14x e 3,36x da mediana do setor. O desvio não reflete uma ação cara, reflete o seu volume de faturação por restaurante e, sobretudo, uma margem muito superior à dos concorrentes: 54,3% de margem EBITDA contra 27,3% da mediana, e 31,9% de margem líquida contra 13,9%. Como um múltiplo de vendas mede apenas faturação e ignora o que sobra dela, comparar a McDonald\u2019s com os pares nessa base é enganador. Seguindo o princípio de Damodaran, segundo o qual todo o múltiplo é função dos fundamentais e o EV/Sales é o EV/EBITDA multiplicado pela margem, os dois múltiplos de vendas foram recompostos com a margem real da empresa: EV/Sales ajustado de 9,83x (18,12x × 54,28%) e P/S ajustado de 7,76x (24,36x × 31,85%). As colunas ajustadas aplicam-se apenas à McDonald\u2019s, já que os pares são a própria referência.'}))));
+
+  f.appendChild(panel('Comparação visual',null,
+    chartBars({labels:[...mm.pares.map(p=>p[1]),'Mediana','MCD'],
+      series:[{name:'P/E',data:[...mm.pares.map(p=>p[2]),mm.mediana[0],mm.mcd[0]],color:PAL[0]},
+              {name:'EV/EBITDA',data:[...mm.pares.map(p=>p[3]),mm.mediana[1],mm.mcd[1]],color:PAL[1]}],
+      unit:'x',dec:1,h:260}),
+    legend([{name:'P/E',color:PAL[0]},{name:'EV/EBITDA',color:PAL[1]}]),
+    chartBars({labels:[...mm.pares.map(p=>p[1]),'Mediana','MCD'],
+      series:[{name:'Margem EBITDA',data:[...mm.pares.map(p=>p[6]*100),mm.mediana[4]*100,mm.mcd[4]*100],color:PAL[3]},
+              {name:'Margem líquida',data:[...mm.pares.map(p=>p[7]*100),mm.mediana[5]*100,mm.mcd[5]*100],color:PAL[2]}],
+      unit:'%',dec:1,h:240,showValues:true,valueFmt:v=>fmt(v,0)+'%'}),
+    legend([{name:'Margem EBITDA',color:PAL[3]},{name:'Margem líquida',color:PAL[2]}]),
+    el('p',{class:'hint',text:'O segundo gráfico mostra a razão do ajustamento: a margem da McDonald\u2019s é aproximadamente o dobro da mediana do setor, nas duas medidas.'})));
+
+  /* aplicação interativa */
+  const sel=new Set(mm.ativosPorDefeito);
+  const out=el('div');
+  const bar=el('div',{class:'toolbar'});
+  function paintMult(){
+    out.innerHTML='';
+    const t=el('table');
+    t.appendChild(el('thead',{},el('tr',{},el('th',{text:'Múltiplo'}),el('th',{text:'Variável de base'}),el('th',{text:'Valor da base (M$)'}),
+      el('th',{text:'Múltiplo'}),el('th',{text:'Enterprise value'}),el('th',{text:'Valor do capital próprio'}),el('th',{text:'Valor por ação'}))));
+    const tb=el('tbody');
+    let soma=0,n=0;
+    mm.aplicacao.forEach(a=>{
+      const on=sel.has(a.id);
+      const tr=el('tr',{style:on?'':'opacity:.38'});
+      tr.appendChild(el('td',{text:a.nome}));
+      tr.appendChild(el('td',{style:'text-align:right;color:#6E767B',text:a.base}));
+      tr.appendChild(el('td',{class:'num',text:fmt(a.valorBase,0)}));
+      tr.appendChild(el('td',{class:'num',text:fmt(a.mult,2)+'x'}));
+      tr.appendChild(el('td',{class:'num',text:fmt(a.ev,0)}));
+      tr.appendChild(el('td',{class:'num',text:fmt(a.cp,0)}));
+      tr.appendChild(el('td',{class:'num',style:'font-weight:600',text:fmt(a.acao,2)+' $'}));
+      tb.appendChild(tr);
+      if(on){soma+=a.acao;n++;}
+    });
+    const media=n?soma/n:0, dif=n?media/M.precoRef-1:0;
+    const sr=el('tr',{class:'sum'});
+    sr.appendChild(el('td',{colspan:6,text:`Média dos ${n} múltiplo${n===1?'':'s'} selecionado${n===1?'':'s'}`}));
+    sr.appendChild(el('td',{class:'num',style:'font-weight:600',text:n?fmt(media,2)+' $':'—'}));
+    tb.appendChild(sr);
+    const dr=el('tr');
+    dr.appendChild(el('td',{colspan:6,style:'color:#6E767B',text:'Diferença face à cotação de referência de '+fmt(M.precoRef,2)+' $'}));
+    dr.appendChild(el('td',{class:'num '+cls(dif),style:'font-weight:600',text:n?sig(dif):'—'}));
+    tb.appendChild(dr);
+    t.appendChild(tb);
+    out.appendChild(el('div',{class:'tw'},t));
+  }
+  mm.aplicacao.forEach(a=>{
+    const b=el('button',{class:'chip','aria-pressed':String(sel.has(a.id)),text:a.nome});
+    b.addEventListener('click',()=>{
+      if(sel.has(a.id)) sel.delete(a.id); else sel.add(a.id);
+      b.setAttribute('aria-pressed',String(sel.has(a.id)));paintMult();});
+    bar.appendChild(b);
+  });
+  bar.appendChild(el('span',{class:'hint',style:'margin:0 0 0 6px',text:'Ative ou desative múltiplos para recalcular a média.'}));
+  paintMult();
+  f.appendChild(panel('Aplicação à McDonald\u2019s','Múltiplos do setor aplicados às variáveis de base de 2025, com os de vendas já ajustados pela margem. A média dos quatro, 302,77 $, é o valor que entra na síntese final.',bar,out));
+  return f;
+});
+</script>
+
+
+<script>
+/* ---------- 9. SÍNTESE ---------- */
+function footballField(metodos, preco, media, veredicto){
+  const w=880, linha=52, topo=104, base=44;
+  const h=topo+metodos.length*linha+base;
+  const m={l:108,r:74};
+  const iw=w-m.l-m.r;
+  let lo=Math.min(preco,...metodos.map(k=>k.min))*0.92;
+  let hi=Math.max(preco,...metodos.map(k=>k.max))*1.06;
+  const passo=50;
+  lo=Math.floor(lo/passo)*passo; hi=Math.ceil(hi/passo)*passo;
+  const x=v=>m.l+((v-lo)/(hi-lo))*iw;
+  const s=svgChart(w,h);
+
+  /* cápsula com o valor médio */
+  const txt=`Valor intrínseco médio: ${fmt(media,2)} $  ·  ${veredicto}`;
+  const larg=Math.min(iw, txt.length*7.9+44);
+  s.appendChild(SN('rect',{x:(w-larg)/2,y:10,width:larg,height:38,rx:19,fill:'#20495F'}));
+  const t1=SN('text',{x:w/2,y:34,'text-anchor':'middle',fill:'#fff','font-size':'14','font-weight':'700'});
+  t1.textContent=txt; s.appendChild(t1);
+
+  /* linha da cotação */
+  const yTop=topo-14, yBot=topo+metodos.length*linha+6;
+  s.appendChild(SN('line',{x1:x(preco),x2:x(preco),y1:yTop,y2:yBot,stroke:'#20495F','stroke-width':1.6,'stroke-dasharray':'7 3 2 3'}));
+  const t2=SN('text',{x:x(preco),y:yTop-8,'text-anchor':'middle',fill:'#20495F','font-size':'12.5','font-weight':'700'});
+  t2.textContent=`Cotação de referência: ${fmt(preco,2)} $`; s.appendChild(t2);
+
+  /* grelha vertical */
+  for(let v=lo;v<=hi+1e-9;v+=passo){
+    s.appendChild(SN('line',{x1:x(v),x2:x(v),y1:topo-6,y2:yBot,stroke:'#E9ECEA','shape-rendering':'crispEdges'}));
+    const tv=SN('text',{x:x(v),y:yBot+20,'text-anchor':'middle','font-size':'11'});
+    tv.textContent=fmt(v,0)+' $'; s.appendChild(tv);
+  }
+  s.appendChild(SN('line',{x1:m.l,x2:m.l+iw,y1:yBot,y2:yBot,stroke:'#B9BFBC','shape-rendering':'crispEdges'}));
+
+  metodos.forEach((k,i)=>{
+    const y=topo+i*linha+14;
+    const rot=SN('text',{x:m.l-16,y:y+4,'text-anchor':'end',fill:'#20495F','font-size':'13','font-weight':'700'});
+    rot.textContent=k.curto; s.appendChild(rot);
+    const x0=x(k.min), x1=x(k.max);
+    if(k.max-k.min>0.01){
+      s.appendChild(SN('rect',{x:x0,y:y-13,width:Math.max(4,x1-x0),height:26,rx:13,fill:'#D9E6F0',stroke:'#20495F','stroke-width':1.4}));
+      [[x0,k.min,'end',-12],[x1,k.max,'start',12]].forEach(([cx,val,anc,off])=>{
+        s.appendChild(SN('circle',{cx,cy:y,r:6,fill:'#20495F'}));
+        const tl=SN('text',{x:cx+off,y:y+4,'text-anchor':anc,fill:'#3E464A','font-size':'11.5'});
+        tl.textContent=fmt(val,2)+' $'; s.appendChild(tl);
+      });
+    }
+    const c=SN('circle',{cx:x(k.valor),cy:y,r:8,fill:'#1B3E52'});
+    c.addEventListener('mousemove',e=>showTip(e, k.max-k.min>0.01
+      ? `<b>${k.curto}</b><br>Base ${fmt(k.valor,2)} $<br>Intervalo ${fmt(k.min,2)} a ${fmt(k.max,2)} $`
+      : `<b>${k.curto}</b><br>${fmt(k.valor,2)} $`));
+    c.addEventListener('mouseleave',hideTip);
+    s.appendChild(c);
+    const tb=SN('text',{x:x(k.valor),y:y-16,'text-anchor':'middle',fill:'#20495F','font-size':'12.5','font-weight':'700'});
+    tb.textContent=fmt(k.valor,2)+' $'; s.appendChild(tb);
+  });
+  return s;
+}
+
+V('resumo','Síntese da avaliação','Síntese da avaliação e conclusão',
+  'Reunião dos quatro métodos, valor médio, comparação com a cotação e com o consenso dos analistas.',
+  ()=>{
+  const f=document.createDocumentFragment();
+  const sel=new Set(M.metodos.map(m=>m.id));
+  const head=el('div');
+  const scaleBox=el('div',{class:'scale-wrap'});
+  const tblBox=el('div');
+  const bar=el('div',{class:'toolbar'});
+
+  function calc(){
+    const on=M.metodos.filter(m=>sel.has(m.id));
+    const somaPesos=on.reduce((a,b)=>a+b.peso,0);
+    const media=on.length?on.reduce((a,b)=>a+b.valor*b.peso,0)/somaPesos:0;
+    return {on,media,somaPesos,dif:on.length?media/M.precoRef-1:0};
+  }
+  function paint(){
+    const {on,media,somaPesos,dif}=calc();
+    head.innerHTML='';
+    head.appendChild(el('div',{class:'readout'},
+      el('span',{class:'big num',text:on.length?fmt(media,2)+' $':'—'}),
+      el('span',{class:'delta num '+cls(dif),text:on.length?sig(dif)+' face à cotação':''}),
+      el('span',{class:'tag '+(dif<-0.15?'bad':dif>0.15?'ok':'warn'),
+        text:dif<-0.15?'Sobreavaliada face ao modelo':dif>0.15?'Subavaliada face ao modelo':'Perto do justo valor'})
+    ));
+    head.appendChild(el('p',{class:'sub',style:'margin:2px 0 0',
+      text:`Média ponderada de ${on.length} método${on.length===1?'':'s'}: ${on.map(m=>`${m.curto} ${pct(m.peso/somaPesos,0)}`).join(', ')}.`}));
+
+    scaleBox.innerHTML='';
+    const veredicto = dif<-0.15 ? 'cotada acima do valor do modelo'
+                    : dif>0.15  ? 'cotada abaixo do valor do modelo'
+                    : 'cotada em linha com o modelo';
+    scaleBox.appendChild(footballField(on.slice().sort((a,b)=>b.valor-a.valor),M.precoRef,media,veredicto));
+    scaleBox.appendChild(el('p',{class:'hint',text:'No DCF, no EVA e no DDM a barra corresponde a uma variação de meio ponto percentual, para baixo e para cima, na taxa de desconto, mantendo o crescimento perpétuo em 2,00%. Os múltiplos aparecem como ponto único, por resultarem de uma média de dois múltiplos e não de um cenário paramétrico. O ponto cheio marca o cenário base de cada método e a linha tracejada a cotação de referência.'}));
+
+    tblBox.innerHTML='';
+    const t=el('table');
+    t.appendChild(el('thead',{},el('tr',{},el('th',{text:'Método'}),el('th',{text:'Valor por ação'}),el('th',{text:'Face à cotação'}),el('th',{text:'Peso'}),el('th',{text:'Na média'}))));
+    const tb=el('tbody');
+    M.metodos.forEach(m=>{
+      const d=m.valor/M.precoRef-1, on2=sel.has(m.id);
+      tb.appendChild(el('tr',{style:on2?'':'opacity:.4'},
+        el('td',{text:m.nome}),
+        el('td',{class:'num',style:'font-weight:600',text:fmt(m.valor,2)+' $'}),
+        el('td',{class:'num '+cls(d),text:sig(d)}),
+        el('td',{class:'num',text:pct(m.peso,0)}),
+        el('td',{style:'text-align:right;color:#6E767B',text:on2?'sim':'não'})));
+    });
+    tb.appendChild(el('tr',{class:'sum'},el('td',{text:'Média ponderada dos métodos selecionados'}),
+      el('td',{class:'num',text:on.length?fmt(media,2)+' $':'—'}),
+      el('td',{class:'num '+cls(dif),text:on.length?sig(dif):'—'}),
+      el('td',{class:'num',text:pct(somaPesos,0)}),el('td',{text:''})));
+    tb.appendChild(el('tr',{},el('td',{text:'Cotação de referência (base da avaliação)'}),
+      el('td',{class:'num',text:fmt(M.precoRef,2)+' $'}),el('td',{text:''}),el('td',{text:''}),el('td',{text:''})));
+    tb.appendChild(el('tr',{},el('td',{text:'Preço-alvo médio dos analistas'}),
+      el('td',{class:'num',text:fmt(M.analistasMedia,2)+' $'}),
+      el('td',{class:'num pos',text:sig(M.analistasMedia/M.precoRef-1)}),el('td',{text:''}),el('td',{text:''})));
+    t.appendChild(tb);
+    tblBox.appendChild(el('div',{class:'tw'},t));
+
+    /* atualizar o cabeçalho da página */
+    document.getElementById('mastFair').textContent=on.length?fmt(media,2)+' $':'—';
+    const md=document.getElementById('mastDelta');
+    md.textContent=on.length?sig(dif):'—'; md.className='num '+cls(dif);
+    const mv=document.getElementById('mastVerdict');
+    mv.textContent=dif<-0.15?'Sobreavaliada face ao modelo':dif>0.15?'Subavaliada face ao modelo':'Perto do justo valor';
+    mv.style.borderColor=mv.style.color=dif>0.15?'var(--green)':dif<-0.15?'var(--signal)':'var(--gold)';
+    mv.style.background=dif>0.15?'var(--green-soft)':dif<-0.15?'var(--signal-soft)':'var(--gold-soft)';
+  }
+  M.metodos.forEach(m=>{
+    const b=el('button',{class:'chip','aria-pressed':'true',text:m.nome.split(' (')[0]});
+    b.addEventListener('click',()=>{
+      if(sel.has(m.id)){ if(sel.size===1) return; sel.delete(m.id);} else sel.add(m.id);
+      b.setAttribute('aria-pressed',String(sel.has(m.id)));paint();});
+    bar.appendChild(b);
+  });
+  paint();
+
+  f.appendChild(panel('Valor médio dos métodos','Média ponderada com os pesos do modelo: DCF 30%, EVA 30%, Múltiplos 30% e Total Payout 10%. Ative ou desative métodos para ver como a conclusão se altera; os pesos são renormalizados entre os métodos ativos.',
+    head,el('div',{class:'toolbar',style:'margin-top:16px'},bar),scaleBox,tblBox));
+
+  const at=el('table');
+  at.appendChild(el('thead',{},el('tr',{},el('th',{text:'Casa de investimento'}),el('th',{text:'Preço-alvo'}),el('th',{text:'Face à cotação'}))));
+  at.appendChild(el('tbody',{},
+    ...M.analistas.map(a=>el('tr',{},el('td',{text:a[0]}),el('td',{class:'num',text:fmt(a[1],0)+' $'}),
+      el('td',{class:'num pos',text:sig(a[1]/M.precoRef-1)}))),
+    el('tr',{class:'sum'},el('td',{text:'Média'}),el('td',{class:'num',text:fmt(M.analistasMedia,2)+' $'}),
+      el('td',{class:'num pos',text:sig(M.analistasMedia/M.precoRef-1)}))
+  ));
+
+  f.appendChild(panel('Consenso dos analistas','Preços-alvo recolhidos no modelo.',el('div',{class:'tw'},at)));
+
+  f.appendChild(panel('Conclusão',null,el('div',{class:'prose wide'},
+    el('p',{text:'A convergência entre o DCF (249,83 $) e o EVA (252,30 $), com apenas 1,0% de diferença, é a verificação cruzada mais sólida do exercício.'}),
+    el('p',{text:'A McDonald\u2019s é uma empresa madura. O primeiro restaurante abriu em 1940 e a sociedade atual foi constituída em 1955 por Ray Kroc, o que lhe dá 86 anos de presença no mercado e 71 anos de história societária. Paga dividendo desde 1976 e aumentou-o em 49 anos consecutivos, ficando a um único aumento do estatuto de Dividend King, reservado às empresas com meio século ininterrupto de subidas. Historicamente, esse anúncio ocorre em outubro.'}),
+    el('p',{text:'A leitura dos dados revela, porém, dois pontos de fragilidade. O primeiro é a desaceleração do mercado norte-americano; tratando-se do mercado que representa 40% das receitas consolidadas, a perda de dinamismo condiciona todo o grupo. O segundo é de natureza estrutural e diz respeito à alteração dos hábitos de consumo, com a geração Z a revelar maior exigência nutricional e o aumento dos tratamentos para a obesidade, como o Ozempic, a constituir um risco real sobre a frequência de visita a médio prazo.'}),
+    el('p',{text:'Não obstante, a empresa continua a crescer e a criar valor. As receitas subiram para 26.885 M$ em 2025, o resultado operacional para 12.393 M$ e o resultado líquido para 8.563 M$, todos em máximos do período analisado. Mais relevante do que o crescimento é a qualidade do retorno: o ROIC situou-se em 27,4% contra um custo médio ponderado do capital de 6,82%, um diferencial próximo de 20 pontos percentuais que se mantém há mais de uma década e constitui a evidência quantitativa de vantagem competitiva sustentada. O ROA, de 14,4%, confirma a mesma leitura.'}),
+    el('p',{text:'A redução do saldo de caixa, de 1.085 M$ para 774 M$, e a passagem da tesouraria líquida a valores negativos são situações a acompanhar, mas explicam-se pelo esforço de investimento em curso, com o capex a atingir 12,5% das vendas para suportar o plano de expansão até 50.000 restaurantes no final de 2027. O endividamento mantém-se controlado: a dívida líquida corresponde a 3,05 vezes o EBITDA e o resultado operacional cobre os juros 7,8 vezes.'}),
+    el('p',{text:'O capital próprio negativo e o ROE que dele resulta não devem ser considerados na apreciação da empresa. Decorrem de uma decisão deliberada de estrutura financeira, com mais de 79 mil M$ de ações próprias acumuladas em tesouraria por via das recompras, e não de qualquer deterioração económica. São um efeito contabilístico da política de devolução de capital ao acionista, não um handicap.'}),
+    el('p',{text:'A rentabilidade é, aliás, um dos traços mais distintivos do negócio: margem EBITDA de 54,3%, margem operacional de 46,1% e margem líquida de 31,9%, todas em máximos do período e muito acima da mediana do setor. Os testes de despiste confirmam a solidez: o Z-Score de Altman situa-se em 4,95, bem acima do limiar de 2,99 e cerca de três vezes acima da média setorial, colocando a empresa em zona segura; e o F-Score de Piotroski, de 6 em 9, fica acima da normalidade do setor.'}),
+    el('p',{text:'Compreende-se, neste contexto, que os múltiplos da McDonald\u2019s se situem acima dos do mercado: 26,08x os lucros contra 24,36x da mediana dos pares, 18,78x o EBITDA contra 18,12x e 10,30x as vendas contra 4,14x. Traduz o reconhecimento pelo mercado da dimensão do negócio, do volume de faturação gerado e, sobretudo, de margens que são aproximadamente o dobro das dos concorrentes diretos.'}),
+    el('p',{class:'lede',text:'Em síntese, este estudo aponta para um valor médio de 262,71 $ por ação, cerca de 4,0% acima da cotação de referência de 252,53 $. A ação encontra-se, portanto, avaliada em linha com o mercado: não oferece margem de segurança relevante, nem revela excesso.'})
+  )));
+  return f;
+});
+
+/* ============================================================
+   ARRANQUE
+   ============================================================ */
+(function(){
+  const rail=document.getElementById('rail'), main=document.getElementById('main');
+  const mast=document.querySelector('.masthead');
+  const setMast=()=>document.documentElement.style.setProperty('--mast-h',mast.offsetHeight+'px');
+  setMast(); window.addEventListener('resize',setMast);
+  const built={};
+  VIEWS.forEach((v,i)=>{
+    const b=el('button',{role:'tab',id:'tab-'+v.id,'aria-controls':'view-'+v.id,'aria-selected':'false',type:'button',text:v.label});
+    b.addEventListener('click',()=>go(v.id));
+    rail.appendChild(b);
+    const s=el('section',{class:'view',id:'view-'+v.id,role:'tabpanel','aria-labelledby':'tab-'+v.id,hidden:'hidden',tabindex:'-1'});
+    s.appendChild(el('header',{class:'view-head'},el('h2',{text:v.title}),el('p',{text:v.sub})));
+    main.appendChild(s);
+  });
+  rail.addEventListener('keydown',e=>{
+    if(!['ArrowDown','ArrowUp','ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;
+    e.preventDefault();
+    const btns=[...rail.querySelectorAll('button')];
+    let i=btns.findIndex(b=>b.getAttribute('aria-selected')==='true');
+    if(e.key==='Home')i=0; else if(e.key==='End')i=btns.length-1;
+    else if(e.key==='ArrowDown'||e.key==='ArrowRight')i=(i+1)%btns.length;
+    else i=(i-1+btns.length)%btns.length;
+    btns[i].focus(); go(VIEWS[i].id);
+  });
+  function go(id){
+    VIEWS.forEach(v=>{
+      const on=v.id===id;
+      document.getElementById('tab-'+v.id).setAttribute('aria-selected',String(on));
+      const s=document.getElementById('view-'+v.id);
+      if(on){
+        if(!built[v.id]){ s.appendChild(v.build()); built[v.id]=true; }
+        s.removeAttribute('hidden');
+      } else s.setAttribute('hidden','hidden');
+    });
+    try{ if(location.hash.slice(1)!==id) history.replaceState(null,'','#'+id); }catch(e){}
+    window.scrollTo({top:0,behavior:'instant'});
+  }
+  window.addEventListener('hashchange',()=>{
+    const id=location.hash.slice(1);
+    if(VIEWS.some(v=>v.id===id)) go(id);
+  });
+  const start=VIEWS.some(v=>v.id===location.hash.slice(1))?location.hash.slice(1):VIEWS[0].id;
+  go(start);
+  /* pré-calcular a síntese para o cabeçalho */
+  if(start!=='resumo'){
+    const media=M.metodos.reduce((a,b)=>a+b.valor,0)/M.metodos.length;
+    document.getElementById('mastFair').textContent=fmt(media,2)+' $';
+    document.getElementById('mastDelta').textContent=sig(media/M.precoRef-1);
+  }
+})();
+</script>
+
+</body>
+</html>
